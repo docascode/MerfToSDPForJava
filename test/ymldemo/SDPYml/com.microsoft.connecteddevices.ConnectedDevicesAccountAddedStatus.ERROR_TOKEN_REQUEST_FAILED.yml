@@ -1,0 +1,15 @@
+### YamlMime:JavaMember
+nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+type: Field
+members:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+  name: ERROR_TOKEN_REQUEST_FAILED
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+  summary: <p>The account operation failed since the app failed to return a token when requested. </p>
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+name: ERROR_TOKEN_REQUEST_FAILED
+package: com.microsoft.connecteddevices
+summary: <p>The account operation failed since the app failed to return a token when requested. </p>
+metadata: {}

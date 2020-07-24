@@ -1,0 +1,15 @@
+### YamlMime:JavaMember
+nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+type: Field
+members:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+  name: ERROR_NO_NETWORK
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+  summary: <p>The account operation failed because there was no network. </p>
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+name: ERROR_NO_NETWORK
+package: com.microsoft.connecteddevices
+summary: <p>The account operation failed because there was no network. </p>
+metadata: {}

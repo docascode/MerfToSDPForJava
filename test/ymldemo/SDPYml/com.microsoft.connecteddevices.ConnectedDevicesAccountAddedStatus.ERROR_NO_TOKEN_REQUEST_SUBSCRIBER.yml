@@ -1,0 +1,15 @@
+### YamlMime:JavaMember
+nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+type: Field
+members:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+  name: ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+  summary: <p>The account operation failed since the app didn't subscribe to the AccessTokenRequested event. </p>
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+name: ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+package: com.microsoft.connecteddevices
+summary: <p>The account operation failed since the app didn't subscribe to the AccessTokenRequested event. </p>
+metadata: {}

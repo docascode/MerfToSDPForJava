@@ -1,0 +1,15 @@
+### YamlMime:JavaMember
+nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+type: Field
+members:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+  name: ERROR_SERVICE_FAILED
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+  summary: <p>The account operation failed due to a web service error. </p>
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+name: ERROR_SERVICE_FAILED
+package: com.microsoft.connecteddevices
+summary: <p>The account operation failed due to a web service error. </p>
+metadata: {}

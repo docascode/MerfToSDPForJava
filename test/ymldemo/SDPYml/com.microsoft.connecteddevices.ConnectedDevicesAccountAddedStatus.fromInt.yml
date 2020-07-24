@@ -1,0 +1,18 @@
+### YamlMime:JavaMember
+nameWithType: ConnectedDevicesAccountAddedStatus.fromInt(int value)
+type: Method
+members:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int value)
+  name: fromInt(int value)
+  nameWithType: ConnectedDevicesAccountAddedStatus.fromInt(int value)
+  parameters:
+  - name: value
+    type: f75371fa
+  interfaces:
+  - type: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int)
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int)
+fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int value)
+name: fromInt(int value)
+package: com.microsoft.connecteddevices
+metadata: {}

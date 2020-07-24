@@ -1,0 +1,16 @@
+### YamlMime:JavaMember
+nameWithType: ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus
+type: Constructor
+members:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus(int value)
+  name: ConnectedDevicesAccountAddedStatus(int value)
+  nameWithType: ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus(int value)
+  parameters:
+  - name: value
+    type: f75371fa
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus(int)
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus*
+fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus
+name: ConnectedDevicesAccountAddedStatus
+package: com.microsoft.connecteddevices
+metadata: {}

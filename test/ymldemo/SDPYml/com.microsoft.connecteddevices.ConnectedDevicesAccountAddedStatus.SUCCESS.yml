@@ -1,0 +1,15 @@
+### YamlMime:JavaMember
+nameWithType: ConnectedDevicesAccountAddedStatus.SUCCESS
+type: Field
+members:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS
+  name: SUCCESS
+  nameWithType: ConnectedDevicesAccountAddedStatus.SUCCESS
+  summary: <p>The account was successfully added to the platform. </p>
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS
+fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS
+name: SUCCESS
+package: com.microsoft.connecteddevices
+summary: <p>The account was successfully added to the platform. </p>
+metadata: {}

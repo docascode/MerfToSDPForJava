@@ -1,0 +1,15 @@
+### YamlMime:JavaMember
+nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+type: Field
+members:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+  name: ERROR_UNKNOWN
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+  summary: <p>The account operation failed for unknown reasons. </p>
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+name: ERROR_UNKNOWN
+package: com.microsoft.connecteddevices
+summary: <p>The account operation failed for unknown reasons. </p>
+metadata: {}

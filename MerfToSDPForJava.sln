@@ -1,0 +1,111 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B249A1AD-D49C-4FC2-8538-9C0CEEF29838}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MerfToSDPForJava", "src\MerfToSDPForJava\MerfToSDPForJava.csproj", "{66C2E609-96F1-456A-B48B-444275751D20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Content.Build.MerfToSDPForJava.Constants", "src\Microsoft.Content.Build.MerfToSDPForJava.Constants\Microsoft.Content.Build.MerfToSDPForJava.Constants.csproj", "{36F5A13A-66E0-44AE-A1BC-60ED981AE762}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Content.Build.MerfToSDPForJava.SDP.DataContracts", "src\Microsoft.Content.Build.MerfToSDPForJava.SDP.DataContracts\Microsoft.Content.Build.MerfToSDPForJava.SDP.DataContracts.csproj", "{7EB286D9-67BF-4B54-989B-633FDFFD2D6C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Content.Build.MerfToSDPForJava.Common", "src\Microsoft.Content.Build.MerfToSDPForJava.Common\Microsoft.Content.Build.MerfToSDPForJava.Common.csproj", "{C19AEF1D-E778-4EE8-ACDB-D5655F8A6E20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Content.Build.MerfToSDPForJava.Steps", "src\Microsoft.Content.Build.MerfToSDPForJava.Steps\Microsoft.Content.Build.MerfToSDPForJava.Steps.csproj", "{1DD33C9A-B345-4D01-9F41-45AFEF1C431C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Content.Build.MerfToSDPForJava.Interpreter", "src\Microsoft.Content.Build.MerfToSDPForJava.Interpreter\Microsoft.Content.Build.MerfToSDPForJava.Interpreter.csproj", "{5DECD13B-4311-474D-8F40-FD0A9E4E801F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Content.Build.MerfToSDPForJava.DataContracts", "src\Microsoft.Content.Build.MerfToSDPForJava.DataContracts\Microsoft.Content.Build.MerfToSDPForJava.DataContracts.csproj", "{D33C7F27-D1A5-4D35-9702-A99976ED4A5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E797DA1F-8A4D-4C4D-AC37-9B9431CD713A}"
+	ProjectSection(SolutionItems) = preProject
+		Test\gen-test-yaml.ps1 = Test\gen-test-yaml.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "merf", "merf", "{75DFD5EF-4255-4482-BA8D-C42F874830D9}"
+	ProjectSection(SolutionItems) = preProject
+		test\merf\com.microsoft.connecteddevices.AsyncOperation.CompletionException.yml = test\merf\com.microsoft.connecteddevices.AsyncOperation.CompletionException.yml
+		test\merf\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml = test\merf\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+		test\merf\com.microsoft.connecteddevices.Event.yml = test\merf\com.microsoft.connecteddevices.Event.yml
+		test\merf\com.microsoft.connecteddevices.yml = test\merf\com.microsoft.connecteddevices.yml
+		test\merf\toc.yml = test\merf\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ymldemo", "ymldemo", "{A105910A-74A6-4AA3-B7E3-BB06CC6E3BE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDPYml", "SDPYml", "{3384EF72-00FF-4BA4-AA9F-154758E971C7}"
+	ProjectSection(SolutionItems) = preProject
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.AsyncOperation.CompletionException.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.AsyncOperation.CompletionException.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.Event.subscribe.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.Event.subscribe.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.Event.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.Event.yml
+		test\ymldemo\SDPYml\com.microsoft.connecteddevices.yml = test\ymldemo\SDPYml\com.microsoft.connecteddevices.yml
+		test\ymldemo\SDPYml\toc.yml = test\ymldemo\SDPYml\toc.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66C2E609-96F1-456A-B48B-444275751D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C2E609-96F1-456A-B48B-444275751D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C2E609-96F1-456A-B48B-444275751D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C2E609-96F1-456A-B48B-444275751D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36F5A13A-66E0-44AE-A1BC-60ED981AE762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F5A13A-66E0-44AE-A1BC-60ED981AE762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F5A13A-66E0-44AE-A1BC-60ED981AE762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F5A13A-66E0-44AE-A1BC-60ED981AE762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB286D9-67BF-4B54-989B-633FDFFD2D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB286D9-67BF-4B54-989B-633FDFFD2D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB286D9-67BF-4B54-989B-633FDFFD2D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB286D9-67BF-4B54-989B-633FDFFD2D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19AEF1D-E778-4EE8-ACDB-D5655F8A6E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19AEF1D-E778-4EE8-ACDB-D5655F8A6E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19AEF1D-E778-4EE8-ACDB-D5655F8A6E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19AEF1D-E778-4EE8-ACDB-D5655F8A6E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD33C9A-B345-4D01-9F41-45AFEF1C431C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD33C9A-B345-4D01-9F41-45AFEF1C431C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD33C9A-B345-4D01-9F41-45AFEF1C431C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD33C9A-B345-4D01-9F41-45AFEF1C431C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DECD13B-4311-474D-8F40-FD0A9E4E801F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DECD13B-4311-474D-8F40-FD0A9E4E801F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DECD13B-4311-474D-8F40-FD0A9E4E801F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DECD13B-4311-474D-8F40-FD0A9E4E801F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33C7F27-D1A5-4D35-9702-A99976ED4A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33C7F27-D1A5-4D35-9702-A99976ED4A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33C7F27-D1A5-4D35-9702-A99976ED4A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33C7F27-D1A5-4D35-9702-A99976ED4A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66C2E609-96F1-456A-B48B-444275751D20} = {B249A1AD-D49C-4FC2-8538-9C0CEEF29838}
+		{36F5A13A-66E0-44AE-A1BC-60ED981AE762} = {B249A1AD-D49C-4FC2-8538-9C0CEEF29838}
+		{7EB286D9-67BF-4B54-989B-633FDFFD2D6C} = {B249A1AD-D49C-4FC2-8538-9C0CEEF29838}
+		{C19AEF1D-E778-4EE8-ACDB-D5655F8A6E20} = {B249A1AD-D49C-4FC2-8538-9C0CEEF29838}
+		{1DD33C9A-B345-4D01-9F41-45AFEF1C431C} = {B249A1AD-D49C-4FC2-8538-9C0CEEF29838}
+		{5DECD13B-4311-474D-8F40-FD0A9E4E801F} = {B249A1AD-D49C-4FC2-8538-9C0CEEF29838}
+		{D33C7F27-D1A5-4D35-9702-A99976ED4A5D} = {B249A1AD-D49C-4FC2-8538-9C0CEEF29838}
+		{75DFD5EF-4255-4482-BA8D-C42F874830D9} = {E797DA1F-8A4D-4C4D-AC37-9B9431CD713A}
+		{A105910A-74A6-4AA3-B7E3-BB06CC6E3BE1} = {E797DA1F-8A4D-4C4D-AC37-9B9431CD713A}
+		{3384EF72-00FF-4BA4-AA9F-154758E971C7} = {A105910A-74A6-4AA3-B7E3-BB06CC6E3BE1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C600AEC-602F-4B7D-863C-A73F9E2BD4E0}
+	EndGlobalSection
+EndGlobal

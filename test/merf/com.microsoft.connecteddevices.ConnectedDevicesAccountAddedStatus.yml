@@ -1,0 +1,237 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  id: ConnectedDevicesAccountAddedStatus
+  parent: com.microsoft.connecteddevices
+  children:
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus(int)
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int)
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: ConnectedDevicesAccountAddedStatus
+  nameWithType: ConnectedDevicesAccountAddedStatus
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  type: Enum
+  source:
+    remote: &o0
+      path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+      branch: release/1.4.0
+      repo: https://microsoft.visualstudio.com/DefaultCollection/OS/_git/cdp
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 13
+  package: com.microsoft.connecteddevices
+  summary: "<p>Contains the values that describe the add account operation status </p>"
+  syntax: &o1
+    content: public enum ConnectedDevicesAccountAddedStatus
+  inheritance:
+  - java.lang.Object
+  - java.lang.Enum<ConnectedDevicesAccountAddedStatus>
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus(int)
+  id: ConnectedDevicesAccountAddedStatus(int)
+  parent: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: ConnectedDevicesAccountAddedStatus(int value)
+  nameWithType: ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus(int value)
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus(int value)
+  overload: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus*
+  type: Constructor
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 40
+  package: com.microsoft.connecteddevices
+  syntax:
+    content: public ConnectedDevicesAccountAddedStatus(int value)
+    parameters:
+    - id: value
+      type: f75371fa
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+  id: ERROR_NO_NETWORK
+  parent: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: ERROR_NO_NETWORK
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+  type: Field
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 21
+  package: com.microsoft.connecteddevices
+  summary: "<p>The account operation failed because there was no network. </p>"
+  syntax:
+    content: public ERROR_NO_NETWORK=(1)
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+  id: ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+  parent: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+  type: Field
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 29
+  package: com.microsoft.connecteddevices
+  summary: "<p>The account operation failed since the app didn't subscribe to the AccessTokenRequested event. </p>"
+  syntax:
+    content: public ERROR_NO_TOKEN_REQUEST_SUBSCRIBER=(3)
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+  id: ERROR_SERVICE_FAILED
+  parent: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: ERROR_SERVICE_FAILED
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+  type: Field
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 25
+  package: com.microsoft.connecteddevices
+  summary: "<p>The account operation failed due to a web service error. </p>"
+  syntax:
+    content: public ERROR_SERVICE_FAILED=(2)
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+  id: ERROR_TOKEN_REQUEST_FAILED
+  parent: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: ERROR_TOKEN_REQUEST_FAILED
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+  type: Field
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 33
+  package: com.microsoft.connecteddevices
+  summary: "<p>The account operation failed since the app failed to return a token when requested. </p>"
+  syntax:
+    content: public ERROR_TOKEN_REQUEST_FAILED=(4)
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+  id: ERROR_UNKNOWN
+  parent: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: ERROR_UNKNOWN
+  nameWithType: ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+  type: Field
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 37
+  package: com.microsoft.connecteddevices
+  summary: "<p>The account operation failed for unknown reasons. </p>"
+  syntax:
+    content: public ERROR_UNKNOWN=(5)
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int)
+  id: fromInt(int)
+  parent: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: fromInt(int value)
+  nameWithType: ConnectedDevicesAccountAddedStatus.fromInt(int value)
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int value)
+  overload: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt*
+  type: Method
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 45
+  package: com.microsoft.connecteddevices
+  syntax:
+    content: public static ConnectedDevicesAccountAddedStatus fromInt(int value)
+    parameters:
+    - id: value
+      type: f75371fa
+    return:
+      type: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+  id: getValue()
+  parent: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: getValue()
+  nameWithType: ConnectedDevicesAccountAddedStatus.getValue()
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+  overload: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue*
+  type: Method
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 54
+  package: com.microsoft.connecteddevices
+  syntax:
+    content: public int getValue()
+    return:
+      type: f75371fa
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS
+  id: SUCCESS
+  parent: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  langs:
+  - java
+  name: SUCCESS
+  nameWithType: ConnectedDevicesAccountAddedStatus.SUCCESS
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS
+  type: Field
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/ConnectedDevicesAccountAddedStatus.java
+    startLine: 17
+  package: com.microsoft.connecteddevices
+  summary: "<p>The account was successfully added to the platform. </p>"
+  syntax:
+    content: public SUCCESS=(0)
+references:
+- uid: f75371fa
+  spec.java:
+  - name: int
+    fullName: int
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus*
+  name: ConnectedDevicesAccountAddedStatus
+  nameWithType: ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus
+  package: com.microsoft.connecteddevices
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue*
+  name: getValue
+  nameWithType: ConnectedDevicesAccountAddedStatus.getValue
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue
+  package: com.microsoft.connecteddevices
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt*
+  name: fromInt
+  nameWithType: ConnectedDevicesAccountAddedStatus.fromInt
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt
+  package: com.microsoft.connecteddevices
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  name: ConnectedDevicesAccountAddedStatus
+  nameWithType: ConnectedDevicesAccountAddedStatus
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  type: Enum
+  summary: "<p>Contains the values that describe the add account operation status </p>"
+  syntax: *o1

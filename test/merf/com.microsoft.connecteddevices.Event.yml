@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.microsoft.connecteddevices.Event
+  id: Event
+  parent: com.microsoft.connecteddevices
+  children:
+  - com.microsoft.connecteddevices.Event.subscribe(EventListener<? super T, ? super R>)
+  href: com.microsoft.connecteddevices.Event.yml
+  langs:
+  - java
+  name: Event<T,R>
+  nameWithType: Event<T,R>
+  fullName: com.microsoft.connecteddevices.Event<T,R>
+  type: Interface
+  source:
+    remote: &o0
+      path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/Event.java
+      branch: release/1.4.0
+      repo: https://microsoft.visualstudio.com/DefaultCollection/OS/_git/cdp
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/Event.java
+    startLine: 16
+  package: com.microsoft.connecteddevices
+  summary: "<p>This interface provides a simple eventing model. Events produce items consumed by EventListeners. The flow of event items is controlled by the EventSubscription. </p>"
+  syntax:
+    content: public interface Event<T,R>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+      description: <p>the event source object type </p>
+    - id: R
+      type: d4d3e1e1
+      description: <p>the event argument type </p>
+- uid: com.microsoft.connecteddevices.Event.subscribe(EventListener<? super T, ? super R>)
+  id: subscribe(EventListener<? super T, ? super R>)
+  parent: com.microsoft.connecteddevices.Event
+  href: com.microsoft.connecteddevices.Event.yml
+  langs:
+  - java
+  name: subscribe(EventListener<? super T, ? super R> listener)
+  nameWithType: Event<T,R>.subscribe(EventListener<? super T, ? super R> listener)
+  fullName: com.microsoft.connecteddevices.Event<T, R>.subscribe(EventListener<? super T, ? super R> listener)
+  overload: com.microsoft.connecteddevices.Event.subscribe*
+  type: Method
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/Event.java
+    startLine: 22
+  package: com.microsoft.connecteddevices
+  summary: "<p>This method subscribes the given listener to receive items. </p>"
+  syntax:
+    content: public EventSubscription subscribe(EventListener<? super T, ? super R> listener)
+    parameters:
+    - id: listener
+      type: com.microsoft.connecteddevices.EventListenerf884ca1b
+    return:
+      type: com.microsoft.connecteddevices.EventSubscription
+      description: <p>The subcription for the event </p>
+references:
+- uid: 8ce1ecb9
+  spec.java:
+  - name: T
+    fullName: T
+- uid: d4d3e1e1
+  spec.java:
+  - name: R
+    fullName: R
+- uid: com.microsoft.connecteddevices.EventListenerf884ca1b
+  spec.java:
+  - uid: com.microsoft.connecteddevices.EventListener
+    name: EventListener
+    fullName: com.microsoft.connecteddevices.EventListener
+    href: com.microsoft.connecteddevices.EventListener.yml
+  - name: <? super T, ? super R>
+    fullName: <? super T, ? super R>
+- uid: com.microsoft.connecteddevices.Event.subscribe*
+  name: subscribe
+  nameWithType: Event<T,R>.subscribe
+  fullName: com.microsoft.connecteddevices.Event<T, R>.subscribe
+  package: com.microsoft.connecteddevices
+- uid: com.microsoft.connecteddevices.EventSubscription
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.EventSubscription.yml
+  name: EventSubscription
+  nameWithType: EventSubscription
+  fullName: com.microsoft.connecteddevices.EventSubscription
+  type: Interface
+  summary: "<p>This interface provides a simple event subscription </p>"
+  syntax:
+    content: public interface EventSubscription
+- uid: com.microsoft.connecteddevices.EventListener
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.EventListener.yml
+  name: EventListener<T,R>
+  nameWithType: EventListener<T,R>
+  fullName: com.microsoft.connecteddevices.EventListener<T,R>
+  type: Interface
+  summary: "<p>This interface provides a simple event-handling method. It allows listeners to be registered to methods through the use of lambda expressions (available in Java 8). Because lambda expressions and anonymous classes allow implicit capture of variables in the enclosing scope, it is important to remember to either use WeakReferences or always ensure to call EventSubscription.cancel to ensure proper cleanup of resources. </p>"
+  syntax:
+    content: public interface EventListener<T,R>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+      description: <p>the event source object type </p>
+    - id: R
+      type: d4d3e1e1
+      description: <p>the event argument type </p>

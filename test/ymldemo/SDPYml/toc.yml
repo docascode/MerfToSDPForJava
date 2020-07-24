@@ -1,0 +1,446 @@
+- uid: com.microsoft.connecteddevices
+  name: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.yml
+  items:
+  - uid: com.microsoft.connecteddevices.AsyncOperation
+    name: AsyncOperation
+    href: com.microsoft.connecteddevices.AsyncOperation.yml
+  - uid: com.microsoft.connecteddevices.AsyncOperation.CompletionException
+    name: AsyncOperation.CompletionException
+    href: com.microsoft.connecteddevices.AsyncOperation.CompletionException.yml
+    items:
+    - uid: com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException*
+      name: CompletionException
+      href: com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException*.yml
+  - uid: com.microsoft.connecteddevices.AsyncOperation.ResultBiConsumer
+    name: AsyncOperation.ResultBiConsumer
+    href: com.microsoft.connecteddevices.AsyncOperation.ResultBiConsumer.yml
+  - uid: com.microsoft.connecteddevices.AsyncOperation.ResultBiFunction
+    name: AsyncOperation.ResultBiFunction
+    href: com.microsoft.connecteddevices.AsyncOperation.ResultBiFunction.yml
+  - uid: com.microsoft.connecteddevices.AsyncOperation.ResultConsumer
+    name: AsyncOperation.ResultConsumer
+    href: com.microsoft.connecteddevices.AsyncOperation.ResultConsumer.yml
+  - uid: com.microsoft.connecteddevices.AsyncOperation.ResultFunction
+    name: AsyncOperation.ResultFunction
+    href: com.microsoft.connecteddevices.AsyncOperation.ResultFunction.yml
+  - uid: com.microsoft.connecteddevices.AsyncOperation.Supplier
+    name: AsyncOperation.Supplier
+    href: com.microsoft.connecteddevices.AsyncOperation.Supplier.yml
+  - uid: com.microsoft.connecteddevices.AsyncOperationWithProgress
+    name: AsyncOperationWithProgress
+    href: com.microsoft.connecteddevices.AsyncOperationWithProgress.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenInvalidatedEventArgs
+    name: ConnectedDevicesAccessTokenInvalidatedEventArgs
+    href: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenInvalidatedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest
+    name: ConnectedDevicesAccessTokenRequest
+    href: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequestedEventArgs
+    name: ConnectedDevicesAccessTokenRequestedEventArgs
+    href: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequestedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccount
+    name: ConnectedDevicesAccount
+    href: com.microsoft.connecteddevices.ConnectedDevicesAccount.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+    name: ConnectedDevicesAccountAddedStatus
+    href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+    items:
+    - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus*
+      name: ConnectedDevicesAccountAddedStatus
+      href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ConnectedDevicesAccountAddedStatus*.yml
+    - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK
+      name: ERROR_NO_NETWORK
+      href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_NETWORK.yml
+    - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+      name: ERROR_NO_TOKEN_REQUEST_SUBSCRIBER
+      href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_NO_TOKEN_REQUEST_SUBSCRIBER.yml
+    - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED
+      name: ERROR_SERVICE_FAILED
+      href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_SERVICE_FAILED.yml
+    - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED
+      name: ERROR_TOKEN_REQUEST_FAILED
+      href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_TOKEN_REQUEST_FAILED.yml
+    - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN
+      name: ERROR_UNKNOWN
+      href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.ERROR_UNKNOWN.yml
+    - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS
+      name: SUCCESS
+      href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS.yml
+    - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int)
+      name: fromInt(int value)
+      href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt.yml
+    - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+      name: getValue()
+      href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountManager
+    name: ConnectedDevicesAccountManager
+    href: com.microsoft.connecteddevices.ConnectedDevicesAccountManager.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountType
+    name: ConnectedDevicesAccountType
+    href: com.microsoft.connecteddevices.ConnectedDevicesAccountType.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAddAccountResult
+    name: ConnectedDevicesAddAccountResult
+    href: com.microsoft.connecteddevices.ConnectedDevicesAddAccountResult.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesDiagnostics
+    name: ConnectedDevicesDiagnostics
+    href: com.microsoft.connecteddevices.ConnectedDevicesDiagnostics.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotification
+    name: ConnectedDevicesNotification
+    href: com.microsoft.connecteddevices.ConnectedDevicesNotification.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistration
+    name: ConnectedDevicesNotificationRegistration
+    href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistration.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationManager
+    name: ConnectedDevicesNotificationRegistrationManager
+    href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationManager.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationResult
+    name: ConnectedDevicesNotificationRegistrationResult
+    href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationResult.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationState
+    name: ConnectedDevicesNotificationRegistrationState
+    href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationState.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+    name: ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+    href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStateChangedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStatus
+    name: ConnectedDevicesNotificationRegistrationStatus
+    href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStatus.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationType
+    name: ConnectedDevicesNotificationType
+    href: com.microsoft.connecteddevices.ConnectedDevicesNotificationType.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesPlatform
+    name: ConnectedDevicesPlatform
+    href: com.microsoft.connecteddevices.ConnectedDevicesPlatform.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesPlatformSettings
+    name: ConnectedDevicesPlatformSettings
+    href: com.microsoft.connecteddevices.ConnectedDevicesPlatformSettings.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesProcessNotificationOperation
+    name: ConnectedDevicesProcessNotificationOperation
+    href: com.microsoft.connecteddevices.ConnectedDevicesProcessNotificationOperation.yml
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesRemoveAccountResult
+    name: ConnectedDevicesRemoveAccountResult
+    href: com.microsoft.connecteddevices.ConnectedDevicesRemoveAccountResult.yml
+  - uid: com.microsoft.connecteddevices.Event
+    name: Event
+    href: com.microsoft.connecteddevices.Event.yml
+    items:
+    - uid: com.microsoft.connecteddevices.Event.subscribe(EventListener<? super T, ? super R>)
+      name: subscribe(EventListener<? super T, ? super R> listener)
+      href: com.microsoft.connecteddevices.Event.subscribe.yml
+  - uid: com.microsoft.connecteddevices.EventListener
+    name: EventListener
+    href: com.microsoft.connecteddevices.EventListener.yml
+  - uid: com.microsoft.connecteddevices.EventSubscription
+    name: EventSubscription
+    href: com.microsoft.connecteddevices.EventSubscription.yml
+  - uid: com.microsoft.connecteddevices.SdkException
+    name: SdkException
+    href: com.microsoft.connecteddevices.SdkException.yml
+- uid: com.microsoft.connecteddevices.remotesystems
+  name: com.microsoft.connecteddevices.remotesystems
+  href: com.microsoft.connecteddevices.remotesystems.yml
+  items:
+  - uid: com.microsoft.connecteddevices.remotesystems.AppServiceInfo
+    name: AppServiceInfo
+    href: com.microsoft.connecteddevices.remotesystems.AppServiceInfo.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystem
+    name: RemoteSystem
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystem.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemAccountFilter
+    name: RemoteSystemAccountFilter
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemAccountFilter.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemAddedEventArgs
+    name: RemoteSystemAddedEventArgs
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemAddedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemApp
+    name: RemoteSystemApp
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemApp.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemAuthorizationKind
+    name: RemoteSystemAuthorizationKind
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemAuthorizationKind.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemAuthorizationKindFilter
+    name: RemoteSystemAuthorizationKindFilter
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemAuthorizationKindFilter.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemDiscoveryType
+    name: RemoteSystemDiscoveryType
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemDiscoveryType.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemDiscoveryTypeFilter
+    name: RemoteSystemDiscoveryTypeFilter
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemDiscoveryTypeFilter.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemEnumerationCompletedEventArgs
+    name: RemoteSystemEnumerationCompletedEventArgs
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemEnumerationCompletedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemFilter
+    name: RemoteSystemFilter
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemFilter.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemKindFilter
+    name: RemoteSystemKindFilter
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemKindFilter.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemKinds
+    name: RemoteSystemKinds
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemKinds.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemLocalVisibilityKind
+    name: RemoteSystemLocalVisibilityKind
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemLocalVisibilityKind.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemLocalVisibilityKindFilter
+    name: RemoteSystemLocalVisibilityKindFilter
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemLocalVisibilityKindFilter.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemPlatform
+    name: RemoteSystemPlatform
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemPlatform.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemPlatformFilter
+    name: RemoteSystemPlatformFilter
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemPlatformFilter.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemRemovedEventArgs
+    name: RemoteSystemRemovedEventArgs
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemRemovedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemStatus
+    name: RemoteSystemStatus
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemStatus.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemStatusType
+    name: RemoteSystemStatusType
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemStatusType.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemStatusTypeFilter
+    name: RemoteSystemStatusTypeFilter
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemStatusTypeFilter.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemUpdatedEventArgs
+    name: RemoteSystemUpdatedEventArgs
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemUpdatedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemWatcher
+    name: RemoteSystemWatcher
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemWatcher.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemWatcherError
+    name: RemoteSystemWatcherError
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemWatcherError.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemWatcherErrorOccurredEventArgs
+    name: RemoteSystemWatcherErrorOccurredEventArgs
+    href: com.microsoft.connecteddevices.remotesystems.RemoteSystemWatcherErrorOccurredEventArgs.yml
+- uid: com.microsoft.connecteddevices.remotesystems.commanding
+  name: com.microsoft.connecteddevices.remotesystems.commanding
+  href: com.microsoft.connecteddevices.remotesystems.commanding.yml
+  items:
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceClosedEventArgs
+    name: AppServiceClosedEventArgs
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceClosedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceClosedStatus
+    name: AppServiceClosedStatus
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceClosedStatus.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceConnection
+    name: AppServiceConnection
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceConnection.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceConnectionOpenedInfo
+    name: AppServiceConnectionOpenedInfo
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceConnectionOpenedInfo.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceConnectionStatus
+    name: AppServiceConnectionStatus
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceConnectionStatus.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceProvider
+    name: AppServiceProvider
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceProvider.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceRequest
+    name: AppServiceRequest
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceRequest.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceRequestReceivedEventArgs
+    name: AppServiceRequestReceivedEventArgs
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceRequestReceivedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceResponse
+    name: AppServiceResponse
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceResponse.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceResponseStatus
+    name: AppServiceResponseStatus
+    href: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceResponseStatus.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.LaunchUriProvider
+    name: LaunchUriProvider
+    href: com.microsoft.connecteddevices.remotesystems.commanding.LaunchUriProvider.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteLauncher
+    name: RemoteLauncher
+    href: com.microsoft.connecteddevices.remotesystems.commanding.RemoteLauncher.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteLauncherOptions
+    name: RemoteLauncherOptions
+    href: com.microsoft.connecteddevices.remotesystems.commanding.RemoteLauncherOptions.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteLaunchUriStatus
+    name: RemoteLaunchUriStatus
+    href: com.microsoft.connecteddevices.remotesystems.commanding.RemoteLaunchUriStatus.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemAppRegistration
+    name: RemoteSystemAppRegistration
+    href: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemAppRegistration.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemAppRegistrationPublishResult
+    name: RemoteSystemAppRegistrationPublishResult
+    href: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemAppRegistrationPublishResult.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemAppRegistrationPublishStatus
+    name: RemoteSystemAppRegistrationPublishStatus
+    href: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemAppRegistrationPublishStatus.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemConnectionInfo
+    name: RemoteSystemConnectionInfo
+    href: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemConnectionInfo.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemConnectionRequest
+    name: RemoteSystemConnectionRequest
+    href: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemConnectionRequest.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.StatelessAppServiceResponse
+    name: StatelessAppServiceResponse
+    href: com.microsoft.connecteddevices.remotesystems.commanding.StatelessAppServiceResponse.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.StatelessAppServiceResponseStatus
+    name: StatelessAppServiceResponseStatus
+    href: com.microsoft.connecteddevices.remotesystems.commanding.StatelessAppServiceResponseStatus.yml
+- uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare
+  name: com.microsoft.connecteddevices.remotesystems.commanding.nearshare
+  href: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.yml
+  items:
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareFileProvider
+    name: NearShareFileProvider
+    href: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareFileProvider.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareHelper
+    name: NearShareHelper
+    href: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareHelper.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareProgress
+    name: NearShareProgress
+    href: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareProgress.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareSender
+    name: NearShareSender
+    href: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareSender.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareStatus
+    name: NearShareStatus
+    href: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareStatus.yml
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareStream
+    name: NearShareStream
+    href: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareStream.yml
+- uid: com.microsoft.connecteddevices.userdata
+  name: com.microsoft.connecteddevices.userdata
+  href: com.microsoft.connecteddevices.userdata.yml
+  items:
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeed
+    name: UserDataFeed
+    href: com.microsoft.connecteddevices.userdata.UserDataFeed.yml
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedNotificationTypes
+    name: UserDataFeedNotificationTypes
+    href: com.microsoft.connecteddevices.userdata.UserDataFeedNotificationTypes.yml
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedPlatforms
+    name: UserDataFeedPlatforms
+    href: com.microsoft.connecteddevices.userdata.UserDataFeedPlatforms.yml
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSubscribeResult
+    name: UserDataFeedSubscribeResult
+    href: com.microsoft.connecteddevices.userdata.UserDataFeedSubscribeResult.yml
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSubscribeStatus
+    name: UserDataFeedSubscribeStatus
+    href: com.microsoft.connecteddevices.userdata.UserDataFeedSubscribeStatus.yml
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSubscription
+    name: UserDataFeedSubscription
+    href: com.microsoft.connecteddevices.userdata.UserDataFeedSubscription.yml
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSyncScope
+    name: UserDataFeedSyncScope
+    href: com.microsoft.connecteddevices.userdata.UserDataFeedSyncScope.yml
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSyncScopeFlags
+    name: UserDataFeedSyncScopeFlags
+    href: com.microsoft.connecteddevices.userdata.UserDataFeedSyncScopeFlags.yml
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSyncStatus
+    name: UserDataFeedSyncStatus
+    href: com.microsoft.connecteddevices.userdata.UserDataFeedSyncStatus.yml
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSyncStatusChangedEventArgs
+    name: UserDataFeedSyncStatusChangedEventArgs
+    href: com.microsoft.connecteddevices.userdata.UserDataFeedSyncStatusChangedEventArgs.yml
+- uid: com.microsoft.connecteddevices.userdata.clipboard
+  name: com.microsoft.connecteddevices.userdata.clipboard
+  href: com.microsoft.connecteddevices.userdata.clipboard.yml
+  items:
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardChannel
+    name: ClipboardChannel
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardChannel.yml
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItem
+    name: ClipboardItem
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItem.yml
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemOriginFilters
+    name: ClipboardItemOriginFilters
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemOriginFilters.yml
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemSaveResult
+    name: ClipboardItemSaveResult
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemSaveResult.yml
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemStateFilters
+    name: ClipboardItemStateFilters
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemStateFilters.yml
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemStatus
+    name: ClipboardItemStatus
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemStatus.yml
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemStatusChangedEventArgs
+    name: ClipboardItemStatusChangedEventArgs
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemStatusChangedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardReader
+    name: ClipboardReader
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardReader.yml
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardReaderDataChangedEventArgs
+    name: ClipboardReaderDataChangedEventArgs
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardReaderDataChangedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardReaderOptions
+    name: ClipboardReaderOptions
+    href: com.microsoft.connecteddevices.userdata.clipboard.ClipboardReaderOptions.yml
+- uid: com.microsoft.connecteddevices.userdata.useractivities
+  name: com.microsoft.connecteddevices.userdata.useractivities
+  href: com.microsoft.connecteddevices.userdata.useractivities.yml
+  items:
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivity
+    name: UserActivity
+    href: com.microsoft.connecteddevices.userdata.useractivities.UserActivity.yml
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivityAttribution
+    name: UserActivityAttribution
+    href: com.microsoft.connecteddevices.userdata.useractivities.UserActivityAttribution.yml
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivityChannel
+    name: UserActivityChannel
+    href: com.microsoft.connecteddevices.userdata.useractivities.UserActivityChannel.yml
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivitySession
+    name: UserActivitySession
+    href: com.microsoft.connecteddevices.userdata.useractivities.UserActivitySession.yml
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivitySessionHistoryItem
+    name: UserActivitySessionHistoryItem
+    href: com.microsoft.connecteddevices.userdata.useractivities.UserActivitySessionHistoryItem.yml
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivityState
+    name: UserActivityState
+    href: com.microsoft.connecteddevices.userdata.useractivities.UserActivityState.yml
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivityVisualElements
+    name: UserActivityVisualElements
+    href: com.microsoft.connecteddevices.userdata.useractivities.UserActivityVisualElements.yml
+- uid: com.microsoft.connecteddevices.userdata.usernotifications
+  name: com.microsoft.connecteddevices.userdata.usernotifications
+  href: com.microsoft.connecteddevices.userdata.usernotifications.yml
+  items:
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotification
+    name: UserNotification
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotification.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationChannel
+    name: UserNotificationChannel
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationChannel.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationPriority
+    name: UserNotificationPriority
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationPriority.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReader
+    name: UserNotificationReader
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReader.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReaderDataChangedEventArgs
+    name: UserNotificationReaderDataChangedEventArgs
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReaderDataChangedEventArgs.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReaderOptions
+    name: UserNotificationReaderOptions
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReaderOptions.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReaderStartPosition
+    name: UserNotificationReaderStartPosition
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReaderStartPosition.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReadState
+    name: UserNotificationReadState
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReadState.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReadStateFilter
+    name: UserNotificationReadStateFilter
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReadStateFilter.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationStatus
+    name: UserNotificationStatus
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationStatus.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationStatusFilter
+    name: UserNotificationStatusFilter
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationStatusFilter.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationUpdateResult
+    name: UserNotificationUpdateResult
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationUpdateResult.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationUserActionState
+    name: UserNotificationUserActionState
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationUserActionState.yml
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationUserActionStateFilter
+    name: UserNotificationUserActionStateFilter
+    href: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationUserActionStateFilter.yml

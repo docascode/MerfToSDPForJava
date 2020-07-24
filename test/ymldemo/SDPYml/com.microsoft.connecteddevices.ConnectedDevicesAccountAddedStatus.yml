@@ -1,0 +1,26 @@
+### YamlMime:JavaEnum
+fields: []
+inheritances:
+- java.lang.Object
+- java.lang.Enum<ConnectedDevicesAccountAddedStatus>
+methods:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int value)
+  name: fromInt(int value)
+  nameWithType: ConnectedDevicesAccountAddedStatus.fromInt(int value)
+  parameters:
+  - name: value
+    type: f75371fa
+  syntax: public static ConnectedDevicesAccountAddedStatus fromInt(int value)
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int)
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+  name: getValue()
+  nameWithType: ConnectedDevicesAccountAddedStatus.getValue()
+  syntax: public int getValue()
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+nameWithType: ConnectedDevicesAccountAddedStatus
+syntax: public enum ConnectedDevicesAccountAddedStatus
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+name: ConnectedDevicesAccountAddedStatus
+package: com.microsoft.connecteddevices
+summary: <p>Contains the values that describe the add account operation status </p>
+metadata: {}

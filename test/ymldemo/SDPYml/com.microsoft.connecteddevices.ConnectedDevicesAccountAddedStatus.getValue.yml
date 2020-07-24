@@ -1,0 +1,15 @@
+### YamlMime:JavaMember
+nameWithType: ConnectedDevicesAccountAddedStatus.getValue()
+type: Method
+members:
+- fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+  name: getValue()
+  nameWithType: ConnectedDevicesAccountAddedStatus.getValue()
+  interfaces:
+  - type: f75371fa
+  uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.getValue()
+name: getValue()
+package: com.microsoft.connecteddevices
+metadata: {}

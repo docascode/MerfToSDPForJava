@@ -1,4 +1,4 @@
-﻿namespace Microsoft.Content.Build.MerfToSDPForJava.DataContracts.Merf
+﻿namespace Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference
 {
     using System;
 

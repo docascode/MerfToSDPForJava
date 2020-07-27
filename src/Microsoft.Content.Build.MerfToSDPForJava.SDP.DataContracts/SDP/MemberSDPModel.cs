@@ -1,6 +1,6 @@
 ﻿namespace Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP
 {
-    using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.Merf;
+    using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference;
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using YamlDotNet.Serialization;

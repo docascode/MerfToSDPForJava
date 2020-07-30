@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Content.Build.MerfToSDPForJava.Common\Microsoft.Content.Build.MerfToSDPForJava.Common.csproj" />
+    <ProjectReference Include="..\Microsoft.Content.Build.MerfToSDPForJava.Interpreter\Microsoft.Content.Build.MerfToSDPForJava.Interpreter.csproj" />
+    <ProjectReference Include="..\Microsoft.Content.Build.MerfToSDPForJava.SDP.DataContracts\Microsoft.Content.Build.MerfToSDPForJava.DataContracts.csproj" />
+  </ItemGroup>
+
+</Project>

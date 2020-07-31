@@ -27,7 +27,6 @@
                 objType.Constructors = TransferConstructors(pageModel.Items);
                 objType.Fields = TransferFields(pageModel.Items);
                 objType.Methods = TransferMethods(pageModel.Items);
-
                 objType.FullName = typeItem.FullName;
                 objType.Inheritances = ConvertStringToInlineMD(typeItem.Inheritance);
                 objType.InheritedMembers = typeItem.InheritedMembers;
@@ -42,6 +41,17 @@
 
                 base.Save(objType, objType.YamlMime, objType.Uid);
 
+                List<AbstractExpression> expressions = new List<AbstractExpression>();
+                expressions.Add(new ConstructorExpression(_outputFolder, objType.Uid));
+                expressions.Add(new FieldExpression(_outputFolder, objType.Uid));
+                expressions.Add(new MethodExpression(_outputFolder, objType.Uid));
+                foreach (var expression in expressions)
+                {
+                    if (!expression.Interpret(pageModel, context))
+                    {
+                        break;
+                    }
+                }
 
                 return false;
             }
@@ -52,9 +62,9 @@
         {
             if (articleItemYamls == null)
                 return null;
-            var constructors = articleItemYamls.Where(item => item.Type == MemberType.Constructor)?.Select(p => p.Uid)?.ToArray();
 
-            if (constructors ==null || constructors.Length == 0)
+            var constructors = articleItemYamls.Where(item => item.Type == MemberType.Constructor)?.Select(p => p.Uid)?.ToArray();
+            if (constructors == null || constructors.Length == 0)
             {
                 return null;
             }
@@ -65,8 +75,8 @@
         {
             if (articleItemYamls == null)
                 return null;
-            var fields = articleItemYamls.Where(item => item.Type == MemberType.Field)?.Select(p => p.Uid)?.ToArray();
 
+            var fields = articleItemYamls.Where(item => item.Type == MemberType.Field)?.Select(p => p.Uid)?.ToArray();
             if (fields == null || fields.Length == 0)
             {
                 return null;
@@ -78,8 +88,8 @@
         {
             if (articleItemYamls == null)
                 return null;
-            var methods = articleItemYamls.Where(item => item.Type == MemberType.Method)?.Select(p => p.Uid)?.ToArray();
 
+            var methods = articleItemYamls.Where(item => item.Type == MemberType.Method)?.Select(p => p.Uid)?.ToArray();
             if (methods == null || methods.Length == 0)
             {
                 return null;

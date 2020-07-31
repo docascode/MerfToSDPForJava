@@ -35,7 +35,7 @@
                 enumSDPModel.InheritedMembers = enumItem.InheritedMembers;
                 enumSDPModel.Methods = TransferMethods(pageModel.Items);
                 enumSDPModel.Fields = TransferFields(pageModel.Items);
-
+                
                 base.Save(enumSDPModel, enumSDPModel.YamlMime, enumSDPModel.Uid);
 
                 return false;
@@ -48,9 +48,11 @@
         {
             if (articleItemYamls == null)
                 return null;
+
             var fields = articleItemYamls.Where(item => item.Type == MemberType.Field)?.ToArray();
             if (fields == null)
                 return null;
+
             List<EnumField> enumFields = new List<EnumField>();
             foreach (var field in fields)
             {
@@ -74,9 +76,11 @@
         {
             if (articleItemYamls == null)
                 return null;
+
             var methods = articleItemYamls.Where(item => item.Type == MemberType.Method)?.ToArray();
             if (methods == null)
                 return null;
+
             List<EnumMethod> enumMethods = new List<EnumMethod>();
             foreach (var method in methods)
             {

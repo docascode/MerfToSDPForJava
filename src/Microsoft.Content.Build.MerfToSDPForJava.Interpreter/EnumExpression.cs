@@ -20,7 +20,7 @@
                 return false;
             }
 
-            var enumItem = pageModel.Items.Where(item => item.Type == MemberType.Enum)?.ToList().FirstOrDefault();
+            var enumItem = pageModel.Items?.Where(item => item.Type == MemberType.Enum)?.ToList()?.FirstOrDefault();
             if (enumItem != null)
             {
                 var enumSDPModel = new EnumSDPModel();

@@ -20,7 +20,7 @@
                 return false;
             }
 
-            var fieldItem = pageModel.Items.Where(item => item.Type == MemberType.Namespace)?.ToList()?.FirstOrDefault();
+            var fieldItem = pageModel.Items?.Where(item => item.Type == MemberType.Namespace)?.ToList()?.FirstOrDefault();
             if (fieldItem != null)
             {
                 var namespaceSDPModel = new NamespaceSDPModel();
@@ -44,7 +44,7 @@
         {
             if (referenceViewModels == null)
                 return null;
-            var classes = referenceViewModels.Where(item => item.Type == MemberType.Class)?.Select(p => p.Uid).ToArray();
+            var classes = referenceViewModels.Where(item => item.Type == MemberType.Class)?.Select(p => p.Uid)?.ToArray();
             if (classes == null || classes.Length == 0)
             {
                 return null;

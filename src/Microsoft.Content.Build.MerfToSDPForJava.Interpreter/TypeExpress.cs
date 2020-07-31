@@ -19,7 +19,7 @@
                 return false;
             }
 
-            var typeItem = pageModel.Items.Where(item => item.Type == MemberType.Interface || item.Type == MemberType.Class).ToList().FirstOrDefault();
+            var typeItem = pageModel.Items?.Where(item => item.Type == MemberType.Interface || item.Type == MemberType.Class)?.ToList()?.FirstOrDefault();
             if (typeItem != null)
             {
                 var objType = new TypeSDPModel();
@@ -52,7 +52,7 @@
         {
             if (articleItemYamls == null)
                 return null;
-            var constructors = articleItemYamls.Where(item => item.Type == MemberType.Constructor)?.Select(p => p.Uid).ToArray();
+            var constructors = articleItemYamls.Where(item => item.Type == MemberType.Constructor)?.Select(p => p.Uid)?.ToArray();
 
             if (constructors ==null || constructors.Length == 0)
             {
@@ -65,7 +65,7 @@
         {
             if (articleItemYamls == null)
                 return null;
-            var fields = articleItemYamls.Where(item => item.Type == MemberType.Field)?.Select(p => p.Uid).ToArray();
+            var fields = articleItemYamls.Where(item => item.Type == MemberType.Field)?.Select(p => p.Uid)?.ToArray();
 
             if (fields == null || fields.Length == 0)
             {
@@ -78,7 +78,7 @@
         {
             if (articleItemYamls == null)
                 return null;
-            var methods = articleItemYamls.Where(item => item.Type == MemberType.Method)?.Select(p => p.Uid).ToArray();
+            var methods = articleItemYamls.Where(item => item.Type == MemberType.Method)?.Select(p => p.Uid)?.ToArray();
 
             if (methods == null || methods.Length == 0)
             {

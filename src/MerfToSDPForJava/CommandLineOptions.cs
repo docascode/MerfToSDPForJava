@@ -7,7 +7,6 @@
     {
         public string SourceFolder = null;
         public string OutputFolder = null;
-        public string Language = "java";
 
         List<string> Extras = null;
         OptionSet _options = null;
@@ -22,7 +21,7 @@
         public bool Parse(string[] args)
         {
             Extras = _options.Parse(args);
-            if (string.IsNullOrEmpty(SourceFolder) || string.IsNullOrEmpty(OutputFolder) || string.IsNullOrEmpty(Language))
+            if (string.IsNullOrEmpty(SourceFolder) || string.IsNullOrEmpty(OutputFolder))
             {
                 return false;
             }

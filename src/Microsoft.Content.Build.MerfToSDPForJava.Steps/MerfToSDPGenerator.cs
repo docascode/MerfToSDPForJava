@@ -1,0 +1,79 @@
+﻿namespace Microsoft.Content.Build.MerfToSDPForJava.Steps
+{
+    using Microsoft.Content.Build.MerfToSDPForJava.Common;
+    using Microsoft.Content.Build.MerfToSDPForJava.Constants;
+    using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP;
+    using System;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    public class MerfToSDPGenerator : IStep
+    {
+        public string StepName
+        {
+            get { return "MerfToSDP"; }
+        }
+        public Task RunAsync(BuildContext context)
+        {
+            var config = context.GetSharedObject(Constants.Config) as ConfigModel;
+            if (config == null)
+            {
+                throw new ApplicationException(string.Format("Key: {0} doesn't exist in build context", Constants.Config));
+            }
+
+            string sdpYmlFolder = StepUtility.GetSDPYmlOutputPath(config.OutputPath);
+            if (Directory.Exists(sdpYmlFolder))
+            {
+                Directory.Delete(sdpYmlFolder, recursive: true);
+            }
+
+            Directory.CreateDirectory(sdpYmlFolder);
+
+            var inputPaths = config.InputPaths;
+            foreach (var inputPath in inputPaths)
+            {
+                Directory.EnumerateFiles(inputPath, "*.yml").AsParallel().ForAll(
+                p =>
+                {
+                    var filename = Path.GetFileNameWithoutExtension(p);
+                    try
+                    {
+                        var content = File.ReadAllText(p, Encoding.UTF8);
+
+                        if (filename != "toc")
+                        {
+
+
+                            ConsoleLogger.WriteLine(
+                              new LogEntry
+                              {
+                                  Phase = StepName,
+                                  Level = LogLevel.Info,
+                                  Message = $"Succeed to interpret Merf file: {filename}.yml.",
+                              });
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        var sb = new StringBuilder();
+                        sb.Append($"Fail to interpret Merf file: {filename}.yml.");
+                        sb.AppendLine("     ");
+                        sb.Append($"Exception: { ex}");
+                        ConsoleLogger.WriteLine(
+                               new LogEntry
+                               {
+                                   Phase = StepName,
+                                   Level = LogLevel.Error,
+                                   Message = sb.ToString()
+                               });
+                    }
+
+                });
+            }
+
+            return Task.FromResult(1);
+        }
+    }
+}

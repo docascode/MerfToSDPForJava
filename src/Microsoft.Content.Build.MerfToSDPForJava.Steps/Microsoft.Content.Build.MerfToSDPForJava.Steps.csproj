@@ -1,17 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mono.Options" Version="6.6.0.161" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Content.Build.MerfToSDPForJava.Common\Microsoft.Content.Build.MerfToSDPForJava.Common.csproj" />
     <ProjectReference Include="..\Microsoft.Content.Build.MerfToSDPForJava.SDP.DataContracts\Microsoft.Content.Build.MerfToSDPForJava.DataContracts.csproj" />
-    <ProjectReference Include="..\Microsoft.Content.Build.MerfToSDPForJava.Steps\Microsoft.Content.Build.MerfToSDPForJava.Steps.csproj" />
   </ItemGroup>
 
 </Project>

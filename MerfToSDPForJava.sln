@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Content.Build.Mer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Content.Build.MerfToSDPForJava.Constants", "src\Microsoft.Content.Build.MerfToSDPForJava.Constants\Microsoft.Content.Build.MerfToSDPForJava.Constants.csproj", "{FF02FCF1-1C69-450E-B531-1A52F3042841}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Content.Build.MerfToSDPForJava.Steps", "src\Microsoft.Content.Build.MerfToSDPForJava.Steps\Microsoft.Content.Build.MerfToSDPForJava.Steps.csproj", "{496F41B5-B8BF-4B0F-BF8D-68682A4FA93A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Content.Build.MerfToSDPForJava.Steps", "src\Microsoft.Content.Build.MerfToSDPForJava.Steps\Microsoft.Content.Build.MerfToSDPForJava.Steps.csproj", "{496F41B5-B8BF-4B0F-BF8D-68682A4FA93A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Content.Build.MerfToSDPForJava.Common", "src\Microsoft.Content.Build.MerfToSDPForJava.Common\Microsoft.Content.Build.MerfToSDPForJava.Common.csproj", "{6C86C721-7552-4860-8143-1F76D1D9748D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Content.Build.MerfToSDPForJava.Common", "src\Microsoft.Content.Build.MerfToSDPForJava.Common\Microsoft.Content.Build.MerfToSDPForJava.Common.csproj", "{6C86C721-7552-4860-8143-1F76D1D9748D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Content.Build.MerfToSDPForJava.Interpreter", "src\Microsoft.Content.Build.MerfToSDPForJava.Interpreter\Microsoft.Content.Build.MerfToSDPForJava.Interpreter.csproj", "{5B82F52F-F9CB-4B91-9080-40B08BABDBD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{6C86C721-7552-4860-8143-1F76D1D9748D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C86C721-7552-4860-8143-1F76D1D9748D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C86C721-7552-4860-8143-1F76D1D9748D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B82F52F-F9CB-4B91-9080-40B08BABDBD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B82F52F-F9CB-4B91-9080-40B08BABDBD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B82F52F-F9CB-4B91-9080-40B08BABDBD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B82F52F-F9CB-4B91-9080-40B08BABDBD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{FF02FCF1-1C69-450E-B531-1A52F3042841} = {4629663B-032C-4FF6-8EB9-C821E9FD8952}
 		{496F41B5-B8BF-4B0F-BF8D-68682A4FA93A} = {4629663B-032C-4FF6-8EB9-C821E9FD8952}
 		{6C86C721-7552-4860-8143-1F76D1D9748D} = {4629663B-032C-4FF6-8EB9-C821E9FD8952}
+		{5B82F52F-F9CB-4B91-9080-40B08BABDBD9} = {4629663B-032C-4FF6-8EB9-C821E9FD8952}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28D21BFE-97F1-404F-BEAE-C494913C3953}

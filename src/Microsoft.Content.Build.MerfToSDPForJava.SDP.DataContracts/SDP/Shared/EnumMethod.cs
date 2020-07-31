@@ -27,7 +27,7 @@
 
         [JsonProperty("returns")]
         [YamlMember(Alias = "returns")]
-        public IEnumerable<Return> Returns { get; set; }
+        public Return Returns { get; set; }
 
         [JsonProperty("summary")]
         [YamlMember(Alias = "summary")]

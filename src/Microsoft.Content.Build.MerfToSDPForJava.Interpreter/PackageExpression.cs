@@ -13,7 +13,7 @@
         {
 
         }
-        public override bool Interpreter(PageModel pageModel, BuildContext context)
+        public override bool Interpret(PageModel pageModel, BuildContext context)
         {
             if (!base.Valid(pageModel))
             {
@@ -29,9 +29,9 @@
                 namespaceSDPModel.Name = fieldItem.Name;
                 namespaceSDPModel.Package = fieldItem.PackageName;
                 namespaceSDPModel.Summary = fieldItem.Summary;
-                namespaceSDPModel.Classes = TransforClasses(pageModel.References);
-                namespaceSDPModel.Enums = TransforEnums(pageModel.References);
-                namespaceSDPModel.Interfaces = TransforInterfaces(pageModel.References);
+                namespaceSDPModel.Classes = TransferClasses(pageModel.References);
+                namespaceSDPModel.Enums = TransferEnums(pageModel.References);
+                namespaceSDPModel.Interfaces = TransferInterfaces(pageModel.References);
 
                 base.Save(namespaceSDPModel, namespaceSDPModel.YamlMime, namespaceSDPModel.Uid);
 
@@ -40,34 +40,34 @@
 
             return true;
         }
-        private IEnumerable<string> TransforClasses(List<ReferenceViewModel> referenceViewModels)
+        private IEnumerable<string> TransferClasses(List<ReferenceViewModel> referenceViewModels)
         {
             if (referenceViewModels == null)
                 return null;
-            var classes = referenceViewModels.Where(item => item.Type == MemberType.Class).Select(p => p.Uid).ToArray();
-            if (classes.Length == 0)
+            var classes = referenceViewModels.Where(item => item.Type == MemberType.Class)?.Select(p => p.Uid).ToArray();
+            if (classes == null || classes.Length == 0)
             {
                 return null;
             }
             return classes;
         }
-        private IEnumerable<string> TransforEnums(List<ReferenceViewModel> referenceViewModels)
+        private IEnumerable<string> TransferEnums(List<ReferenceViewModel> referenceViewModels)
         {
             if (referenceViewModels == null)
                 return null;
-            var enums = referenceViewModels.Where(item => item.Type == MemberType.Enum).Select(p => p.Uid).ToArray();
-            if (enums.Length == 0)
+            var enums = referenceViewModels.Where(item => item.Type == MemberType.Enum)?.Select(p => p.Uid).ToArray();
+            if (enums==null ||enums.Length == 0)
             {
                 return null;
             }
             return enums;
         }
-        private IEnumerable<string> TransforInterfaces(List<ReferenceViewModel> referenceViewModels)
+        private IEnumerable<string> TransferInterfaces(List<ReferenceViewModel> referenceViewModels)
         {
             if (referenceViewModels == null)
                 return null;
-            var interfaces = referenceViewModels.Where(item => item.Type == MemberType.Interface).Select(p => p.Uid).ToArray();
-            if (interfaces.Length == 0)
+            var interfaces = referenceViewModels.Where(item => item.Type == MemberType.Interface)?.Select(p => p.Uid).ToArray();
+            if (interfaces == null || interfaces.Length == 0)
             {
                 return null;
             }

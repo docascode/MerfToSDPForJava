@@ -13,7 +13,7 @@
         {
 
         }
-        public override bool Interpreter(PageModel pageModel, BuildContext context)
+        public override bool Interpret(PageModel pageModel, BuildContext context)
         {
             if (!base.Valid(pageModel))
             {
@@ -30,11 +30,11 @@
                 enumSDPModel.Package = enumItem.PackageName;
                 enumSDPModel.Summary = enumItem.Summary;
                 enumSDPModel.NameWithType = enumItem.NameWithType;
-                enumSDPModel.Syntax = TransforSyntax(enumItem.Syntax);
+                enumSDPModel.Syntax = TransferSyntax(enumItem.Syntax);
                 enumSDPModel.Inheritances = ConvertStringToInlineMD(enumItem.Inheritance);
                 enumSDPModel.InheritedMembers = enumItem.InheritedMembers;
-                enumSDPModel.Methods = TransforMethods(pageModel.Items);
-                enumSDPModel.Fields = TransforFields(pageModel.Items);
+                enumSDPModel.Methods = TransferMethods(pageModel.Items);
+                enumSDPModel.Fields = TransferFields(pageModel.Items);
 
                 base.Save(enumSDPModel, enumSDPModel.YamlMime, enumSDPModel.Uid);
 
@@ -44,11 +44,13 @@
             return true;
         }
 
-        private IEnumerable<EnumField> TransforFields(List<ArticleItemYaml> articleItemYamls)
+        private IEnumerable<EnumField> TransferFields(List<ArticleItemYaml> articleItemYamls)
         {
             if (articleItemYamls == null)
                 return null;
-            var fields = articleItemYamls.Where(item => item.Type == MemberType.Field).ToArray();
+            var fields = articleItemYamls.Where(item => item.Type == MemberType.Field)?.ToArray();
+            if (fields == null)
+                return null;
             List<EnumField> enumFields = new List<EnumField>();
             foreach (var field in fields)
             {
@@ -68,11 +70,13 @@
 
             return enumFields;
         }
-        private IEnumerable<EnumMethod> TransforMethods(List<ArticleItemYaml> articleItemYamls)
+        private IEnumerable<EnumMethod> TransferMethods(List<ArticleItemYaml> articleItemYamls)
         {
             if (articleItemYamls == null)
                 return null;
-            var methods = articleItemYamls.Where(item => item.Type == MemberType.Method).ToArray();
+            var methods = articleItemYamls.Where(item => item.Type == MemberType.Method)?.ToArray();
+            if (methods == null)
+                return null;
             List<EnumMethod> enumMethods = new List<EnumMethod>();
             foreach (var method in methods)
             {
@@ -81,10 +85,10 @@
                 enumMethod.Name = method.Name;
                 enumMethod.NameWithType = method.NameWithType;
                 enumMethod.Overridden = method.Overridden;
-                enumMethod.Parameters = TransforParameters(method.Syntax);
+                enumMethod.Parameters = TransferParameters(method.Syntax);
                 enumMethod.Summary = method.Summary;
-                enumMethod.Syntax = TransforSyntax(method.Syntax);
-                enumMethod.Returns = TransforReturns(method.Syntax);
+                enumMethod.Syntax = TransferSyntax(method.Syntax);
+                enumMethod.Returns = TransferReturns(method.Syntax);
                 enumMethod.Uid = method.Uid;
                 enumMethods.Add(enumMethod);
             }

@@ -12,7 +12,7 @@
         {
 
         }
-        public override bool Interpreter(PageModel pageModel, BuildContext context)
+        public override bool Interpret(PageModel pageModel, BuildContext context)
         {
             if (!base.Valid(pageModel))
             {
@@ -24,9 +24,9 @@
             {
                 var objType = new TypeSDPModel();
 
-                objType.Constructors = TransforConstructors(pageModel.Items);
-                objType.Fields = TransforFields(pageModel.Items);
-                objType.Methods = TransforMethods(pageModel.Items);
+                objType.Constructors = TransferConstructors(pageModel.Items);
+                objType.Fields = TransferFields(pageModel.Items);
+                objType.Methods = TransferMethods(pageModel.Items);
 
                 objType.FullName = typeItem.FullName;
                 objType.Inheritances = ConvertStringToInlineMD(typeItem.Inheritance);
@@ -35,9 +35,9 @@
                 objType.NameWithType = typeItem.NameWithType;
                 objType.Package = typeItem.PackageName;
                 objType.Summary = typeItem.Summary;
-                objType.Syntax = TransforSyntax(typeItem.Syntax);
+                objType.Syntax = TransferSyntax(typeItem.Syntax);
                 objType.Type = typeItem.Type?.ToString().ToLower();
-                objType.TypeParameters = TransforTypeParameters(typeItem.Syntax);
+                objType.TypeParameters = TransferTypeParameters(typeItem.Syntax);
                 objType.Uid = typeItem.Uid;
 
                 base.Save(objType, objType.YamlMime, objType.Uid);
@@ -48,39 +48,39 @@
 
             return true;
         }
-        private IEnumerable<string> TransforConstructors(List<ArticleItemYaml> articleItemYamls)
+        private IEnumerable<string> TransferConstructors(List<ArticleItemYaml> articleItemYamls)
         {
             if (articleItemYamls == null)
                 return null;
-            var constructors = articleItemYamls.Where(item => item.Type == MemberType.Constructor).Select(p => p.Uid).ToArray();
+            var constructors = articleItemYamls.Where(item => item.Type == MemberType.Constructor)?.Select(p => p.Uid).ToArray();
 
-            if (constructors.Length == 0)
+            if (constructors ==null || constructors.Length == 0)
             {
                 return null;
             }
 
             return constructors;
         }
-        private IEnumerable<string> TransforFields(List<ArticleItemYaml> articleItemYamls)
+        private IEnumerable<string> TransferFields(List<ArticleItemYaml> articleItemYamls)
         {
             if (articleItemYamls == null)
                 return null;
-            var fields = articleItemYamls.Where(item => item.Type == MemberType.Field).Select(p => p.Uid).ToArray();
+            var fields = articleItemYamls.Where(item => item.Type == MemberType.Field)?.Select(p => p.Uid).ToArray();
 
-            if (fields.Length == 0)
+            if (fields == null || fields.Length == 0)
             {
                 return null;
             }
 
             return fields;
         }
-        private IEnumerable<string> TransforMethods(List<ArticleItemYaml> articleItemYamls)
+        private IEnumerable<string> TransferMethods(List<ArticleItemYaml> articleItemYamls)
         {
             if (articleItemYamls == null)
                 return null;
-            var methods = articleItemYamls.Where(item => item.Type == MemberType.Method).Select(p => p.Uid).ToArray();
+            var methods = articleItemYamls.Where(item => item.Type == MemberType.Method)?.Select(p => p.Uid).ToArray();
 
-            if (methods.Length == 0)
+            if (methods == null || methods.Length == 0)
             {
                 return null;
             }

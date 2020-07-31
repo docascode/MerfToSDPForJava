@@ -62,7 +62,7 @@
 
                             foreach (var expression in expressions)
                             {
-                                if (!expression.Interpreter(pageModel, context))
+                                if (!expression.Interpret(pageModel, context))
                                 {
                                     break;
                                 }

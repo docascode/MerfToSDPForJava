@@ -16,7 +16,7 @@
             _outputFolder = outputFolder;
             _parentUid = parentUid;
         }
-        public virtual bool Interpreter(PageModel pageModel, BuildContext context)
+        public virtual bool Interpret(PageModel pageModel, BuildContext context)
         {
             return true;
         }
@@ -42,7 +42,7 @@
             return true;
         }
 
-        protected Member TransforMember(ArticleItemYaml articleItemYaml)
+        protected Member TransferMember(ArticleItemYaml articleItemYaml)
         {
             if (articleItemYaml == null)
             {
@@ -54,17 +54,17 @@
             member.Name = articleItemYaml.Name;
             member.NameWithType = articleItemYaml.NameWithType;
             member.Overridden = articleItemYaml.Overridden;
-            member.Parameters = TransforParameters(articleItemYaml.Syntax);
-            member.Returns = TransforReturns(articleItemYaml.Syntax);
-            member.Syntax = TransforSyntax(articleItemYaml.Syntax);
+            member.Parameters = TransferParameters(articleItemYaml.Syntax);
+            member.Returns = TransferReturns(articleItemYaml.Syntax);
+            member.Syntax = TransferSyntax(articleItemYaml.Syntax);
             member.Summary = articleItemYaml.Summary;
-            member.TypeParameters = TransforTypeParameters(articleItemYaml.Syntax);
+            member.TypeParameters = TransferTypeParameters(articleItemYaml.Syntax);
             member.Uid = articleItemYaml.Uid;
 
             return member;
         }
 
-        protected Return TransforReturns(SyntaxDetailViewModel syntax)
+        protected Return TransferReturns(SyntaxDetailViewModel syntax)
         {
             if (syntax == null || syntax.Return == null)
             {
@@ -80,7 +80,7 @@
             return returns;
         }
 
-        protected IEnumerable<Parameter> TransforParameters(SyntaxDetailViewModel syntax)
+        protected IEnumerable<Parameter> TransferParameters(SyntaxDetailViewModel syntax)
         {
             if (syntax == null || syntax.Parameters == null || syntax.Parameters.Count == 0)
             {
@@ -97,7 +97,7 @@
             return parameters;
         }
 
-        protected IEnumerable<TypeParameter> TransforTypeParameters(SyntaxDetailViewModel syntax)
+        protected IEnumerable<TypeParameter> TransferTypeParameters(SyntaxDetailViewModel syntax)
         {
             if (syntax == null || syntax.TypeParameters == null || syntax.TypeParameters.Count == 0)
             {
@@ -129,7 +129,7 @@
             return str?.Replace("<", "&lt;").Replace(">", "&gt;");
         }
 
-        protected string TransforSyntax(SyntaxDetailViewModel syntax)
+        protected string TransferSyntax(SyntaxDetailViewModel syntax)
         {
             if (syntax == null)
                 return null;

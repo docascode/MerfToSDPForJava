@@ -12,8 +12,11 @@
 
         [YamlMember(Alias = "name")]
         public string Name { get; set; }
+        [YamlMember(Alias = "type")]
+        public string Type { get; set; }
 
         [YamlMember(Alias = "href")]
+        [YamlIgnore]
         public string Href { get; set; }
 
         [YamlMember(Alias = "originalHref")]

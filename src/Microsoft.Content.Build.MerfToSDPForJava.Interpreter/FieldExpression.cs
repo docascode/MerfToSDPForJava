@@ -25,6 +25,7 @@
             if (fields == null || fields.Count == 0)
                 return true;
 
+            var tocTracker = context.GetSharedObject(Constants.Constants.ExtendedIdMappings) as ConcurrentDictionary<string, List<TocItemYaml>>;
             foreach (var field in fields)
             {
                 var memberSDPModel = new MemberSDPModel();
@@ -44,6 +45,17 @@
 
                 memberSDPModel.PropertyToXrefString(pageModel);
                 base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid);
+                var tocItem = new List<TocItemYaml>() { new TocItemYaml
+                {
+                    Uid = member.Uid,
+                    Name = member.Name.RemoveFromValue("("),
+                    Type =MemberType.Field.ToString().ToLower()
+                }};
+                tocTracker.AddOrUpdate(_parentUid, tocItem, (key, oldValue) =>
+                {
+                    oldValue.AddRange(tocItem);
+                    return oldValue;
+                });
             }
 
             return true;

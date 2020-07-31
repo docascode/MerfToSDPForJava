@@ -3,6 +3,7 @@
     using Microsoft.Content.Build.MerfToSDPForJava.Common;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP;
+    using System.Collections.Concurrent;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -31,6 +32,8 @@
                 return true;
             }
 
+            var tocTracker = context.GetSharedObject(Constants.Constants.ExtendedIdMappings) as ConcurrentDictionary<string, List<TocItemYaml>>;
+
             foreach (var item in methodsOverLoading)
             {
                 var filename = item.Overload.Remove(item.Overload.Length - 1);
@@ -53,6 +56,16 @@
             {
                 keyValuePair.Value.PropertyToXrefString(pageModel);
                 base.Save(keyValuePair.Value, keyValuePair.Value.YamlMime, keyValuePair.Key);
+                var tocItem = new List<TocItemYaml>() {new TocItemYaml{
+                    Uid = keyValuePair.Value.Uid,
+                    Name = keyValuePair.Value.Name.RemoveFromValue("("),
+                    Type = MemberType.Method.ToString().ToLower()
+                }};
+                tocTracker.AddOrUpdate(_parentUid, tocItem, (key, oldValue) =>
+                {
+                    oldValue.AddRange(tocItem);
+                    return oldValue;
+                });
             }
 
             return true;

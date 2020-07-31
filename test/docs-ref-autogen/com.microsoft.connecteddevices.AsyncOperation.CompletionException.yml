@@ -1,0 +1,80 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.microsoft.connecteddevices.AsyncOperation.CompletionException
+  id: CompletionException
+  parent: com.microsoft.connecteddevices
+  children:
+  - com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException()
+  - com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException(String)
+  href: com.microsoft.connecteddevices.AsyncOperation.CompletionException.yml
+  langs:
+  - java
+  name: AsyncOperation.CompletionException
+  nameWithType: AsyncOperation.CompletionException
+  fullName: com.microsoft.connecteddevices.AsyncOperation.CompletionException
+  type: Class
+  source:
+    remote: &o0
+      path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/AsyncOperation.java
+      branch: release/1.4.0
+      repo: https://microsoft.visualstudio.com/DefaultCollection/OS/_git/cdp
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/AsyncOperation.java
+    startLine: 154
+  package: com.microsoft.connecteddevices
+  summary: "<p>Unchecked exception that holds the exception that caused the operation to complete exceptionally. </p>\r\n<p>Used like <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExecutionException</xref> except that it is unchecked so that it can propagate to dependent operations without needing to know the full set of exceptions / requiring all exception observing continuations to declare that they may throw the ExecutionException. </p>"
+  syntax:
+    content: public class CompletionException
+  inheritance:
+  - java.lang.Object
+  - RuntimeException
+- uid: com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException()
+  id: CompletionException()
+  parent: com.microsoft.connecteddevices.AsyncOperation.CompletionException
+  href: com.microsoft.connecteddevices.AsyncOperation.CompletionException.yml
+  langs:
+  - java
+  name: CompletionException()
+  nameWithType: AsyncOperation.CompletionException.CompletionException()
+  fullName: com.microsoft.connecteddevices.AsyncOperation<T>.CompletionException.CompletionException()
+  overload: com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException*
+  type: Constructor
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/AsyncOperation.java
+    startLine: 159
+  package: com.microsoft.connecteddevices
+  summary: "<p>Constructs a CompletionException with no message. </p>"
+  syntax:
+    content: protected CompletionException()
+- uid: com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException(String)
+  id: CompletionException(String)
+  parent: com.microsoft.connecteddevices.AsyncOperation.CompletionException
+  href: com.microsoft.connecteddevices.AsyncOperation.CompletionException.yml
+  langs:
+  - java
+  name: CompletionException(String message)
+  nameWithType: AsyncOperation.CompletionException.CompletionException(String message)
+  fullName: com.microsoft.connecteddevices.AsyncOperation<T>.CompletionException.CompletionException(String message)
+  overload: com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException*
+  type: Constructor
+  source:
+    remote: *o0
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/AsyncOperation.java
+    startLine: 166
+  package: com.microsoft.connecteddevices
+  summary: "<p>Constructs a CompletionException with an exception message. </p>"
+  syntax:
+    content: protected CompletionException(String message)
+    parameters:
+    - id: message
+      type: "26831127"
+references:
+- uid: com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException*
+  name: CompletionException
+  nameWithType: AsyncOperation.CompletionException.CompletionException
+  fullName: com.microsoft.connecteddevices.AsyncOperation<T>.CompletionException.CompletionException
+  package: com.microsoft.connecteddevices
+- uid: "26831127"
+  spec.java:
+  - name: String
+    fullName: String

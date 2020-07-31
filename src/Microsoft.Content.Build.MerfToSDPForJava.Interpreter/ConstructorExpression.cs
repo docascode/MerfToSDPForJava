@@ -30,6 +30,7 @@
                 return true;
             }
 
+            var tocTracker = context.GetSharedObject(Constants.Constants.ExtendedIdMappings) as ConcurrentDictionary<string, List<TocItemYaml>>;
             var combinationSDPModel = new MemberSDPModel();
             for (var i = 0; i < constructorsOverLoading.Count; i++)
             {
@@ -57,6 +58,17 @@
                     combinationSDPModel.PropertyToXrefString(pageModel);
                     var filename = constructor.Overload.Remove(constructor.Overload.Length - 1);
                     base.Save(combinationSDPModel, combinationSDPModel.YamlMime, filename);
+                    var tocItem = new List<TocItemYaml>() { new TocItemYaml()
+                    {
+                        Uid = constructor.Overload,
+                        Name =  combinationSDPModel.Name.RemoveFromValue("("),
+                        Type =MemberType.Constructor.ToString().ToLower()
+                    } };
+                    tocTracker.AddOrUpdate(_parentUid, tocItem, (key, oldValue) =>
+                    {
+                        oldValue.AddRange(tocItem);
+                        return oldValue;
+                    });
                 }
             }
 
@@ -84,7 +96,17 @@
                 }
 
                 memberSDPModel.PropertyToXrefString(pageModel);
-                base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid);
+                base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid); var tocItem = new List<TocItemYaml>() { new TocItemYaml()
+                {
+                    Uid = memberSDPModel.Uid,
+                    Name = memberSDPModel.Name.RemoveFromValue("("),
+                    Type = MemberType.Constructor.ToString().ToLower()
+                } };
+                tocTracker.AddOrUpdate(_parentUid, tocItem, (key, oldValue) =>
+                {
+                    oldValue.AddRange(tocItem);
+                    return oldValue;
+                });
             }
 
             return true;

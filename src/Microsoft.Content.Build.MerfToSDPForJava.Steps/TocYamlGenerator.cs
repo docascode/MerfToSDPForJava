@@ -2,9 +2,12 @@
 {
     using Microsoft.Content.Build.MerfToSDPForJava.Common;
     using Microsoft.Content.Build.MerfToSDPForJava.Constants;
+    using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP;
+    using Microsoft.Content.Build.MerfToSDPForJava.Interpreter;
     using System;
     using System.IO;
+    using System.Text;
     using System.Threading.Tasks;
 
     public class TocYamlGenerator : IStep
@@ -38,7 +41,16 @@
                         throw new ApplicationException(string.Format("toc.yml: toc.yml doesn't exist in the {0} directory.", inputPath));
                     }
 
-                   
+                    var content = File.ReadAllText(tocFilePath, Encoding.UTF8);
+                    TocYaml toc;
+                    using (StringReader reader = new StringReader(content))
+                    {
+                        toc = YamlUtility.Deserialize<TocYaml>(reader);
+                    }
+
+                    TocExpression javaTocExpression = new TocExpression(config.OutputPath);
+                    javaTocExpression.Interpreter(toc, context);
+
                     ConsoleLogger.WriteLine(
                              new LogEntry
                              {

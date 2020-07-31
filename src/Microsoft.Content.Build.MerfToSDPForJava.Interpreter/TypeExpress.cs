@@ -5,6 +5,7 @@
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP;
     using System.Collections.Generic;
     using System.Linq;
+
     public class TypeExpress : AbstractExpression
     {
         public TypeExpress(string outputFolder, string fileName)

@@ -42,6 +42,7 @@
                     memberSDPModel.Members.Add(member);
                 }
 
+                memberSDPModel.PropertyToXrefString(pageModel);
                 base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid);
             }
 

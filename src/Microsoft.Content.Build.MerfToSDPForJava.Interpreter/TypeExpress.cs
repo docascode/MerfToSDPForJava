@@ -24,7 +24,6 @@
             if (typeItem != null)
             {
                 var objType = new TypeSDPModel();
-
                 objType.Constructors = TransferConstructors(pageModel.Items);
                 objType.Fields = TransferFields(pageModel.Items);
                 objType.Methods = TransferMethods(pageModel.Items);
@@ -39,7 +38,8 @@
                 objType.Type = typeItem.Type?.ToString().ToLower();
                 objType.TypeParameters = TransferTypeParameters(typeItem.Syntax);
                 objType.Uid = typeItem.Uid;
-
+                
+                objType.PropertyToXrefString(pageModel);
                 base.Save(objType, objType.YamlMime, objType.Uid);
 
                 List<AbstractExpression> expressions = new List<AbstractExpression>();

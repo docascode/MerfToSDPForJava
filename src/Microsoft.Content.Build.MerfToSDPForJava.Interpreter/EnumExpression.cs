@@ -35,7 +35,8 @@
                 enumSDPModel.InheritedMembers = enumItem.InheritedMembers;
                 enumSDPModel.Methods = TransferMethods(pageModel.Items);
                 enumSDPModel.Fields = TransferFields(pageModel.Items);
-                
+
+                enumSDPModel.PropertyToXrefString(pageModel);
                 base.Save(enumSDPModel, enumSDPModel.YamlMime, enumSDPModel.Uid);
 
                 return false;

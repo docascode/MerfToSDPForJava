@@ -51,6 +51,7 @@
 
             foreach (var keyValuePair in keyValuePairs_methodOverloading)
             {
+                keyValuePair.Value.PropertyToXrefString(pageModel);
                 base.Save(keyValuePair.Value, keyValuePair.Value.YamlMime, keyValuePair.Key);
             }
 

@@ -54,6 +54,7 @@
 
                 if (i == constructors.Count - 1)
                 {
+                    combinationSDPModel.PropertyToXrefString(pageModel);
                     var filename = constructor.Overload.Remove(constructor.Overload.Length - 1);
                     base.Save(combinationSDPModel, combinationSDPModel.YamlMime, filename);
                 }
@@ -82,6 +83,7 @@
                     memberSDPModel.Members.Add(member);
                 }
 
+                memberSDPModel.PropertyToXrefString(pageModel);
                 base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid);
             }
 

@@ -6,9 +6,9 @@
     {
         public override bool Interpreter(PageModel pageModel, string uid, out string result)
         {
+            result = null;
             if (pageModel == null || pageModel.References == null || string.IsNullOrEmpty(uid))
             {
-                result = null;
                 return false;
             }
 
@@ -16,7 +16,6 @@
             var singletonReference = references?.FirstOrDefault();
             if (singletonReference == null)
             {
-                result = null;
                 return false;
             }
 
@@ -33,7 +32,6 @@
                 return false;
             }
 
-            result = null;
             return true;
         }
     }

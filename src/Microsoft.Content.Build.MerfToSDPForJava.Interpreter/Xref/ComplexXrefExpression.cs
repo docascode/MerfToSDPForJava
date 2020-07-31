@@ -8,18 +8,22 @@
     {
         public override bool Interpreter(PageModel pageModel, string uid, out string result)
         {
+            result = null;
             if (pageModel == null || pageModel.References == null || string.IsNullOrEmpty(uid))
             {
-                result = null;
                 return false;
             }
 
             var references = pageModel.References.Where(p => p.Uid == uid)?.ToList();
             var reference = references?.FirstOrDefault();
-            if (reference == null || reference.SpecForJava == null)
+            if (reference == null)
             {
-                result = null;
                 return false;
+            }
+
+            if (reference.SpecForJava == null)
+            {
+                return true;
             }
 
             if (reference.SpecForJava.Count > 1)

@@ -2,8 +2,11 @@
 {
     using Microsoft.Content.Build.MerfToSDPForJava.Common;
     using Microsoft.Content.Build.MerfToSDPForJava.Constants;
+    using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP;
+    using Microsoft.Content.Build.MerfToSDPForJava.Interpreter;
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Text;
@@ -44,7 +47,26 @@
 
                         if (filename != "toc")
                         {
+                            PageModel pageModel;
+                            using (StringReader reader = new StringReader(content))
+                            {
+                                pageModel = YamlUtility.Deserialize<PageModel>(reader);
+                            }
+                            List<AbstractExpression> expressions = new List<AbstractExpression>();
+                            expressions.Add(new PackageExpression(config.OutputPath, filename));
+                            expressions.Add(new TypeExpress(config.OutputPath, filename));
+                            expressions.Add(new EnumExpression(config.OutputPath, filename));
 
+                            if (pageModel == null)
+                                return;
+
+                            foreach (var expression in expressions)
+                            {
+                                if (!expression.Interpret(pageModel, context))
+                                {
+                                    break;
+                                }
+                            }
 
                             ConsoleLogger.WriteLine(
                               new LogEntry

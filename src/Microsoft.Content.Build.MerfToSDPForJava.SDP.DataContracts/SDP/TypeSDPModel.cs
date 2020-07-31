@@ -48,7 +48,7 @@
 
         [JsonProperty("type")]
         [YamlMember(Alias = "type")]
-        public MemberType? Type { get; set; }
+        public string Type { get; set; }
 
         [JsonProperty("typeParameters")]
         [YamlMember(Alias = "typeParameters")]

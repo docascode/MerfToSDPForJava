@@ -1,0 +1,280 @@
+- uid: com.microsoft.connecteddevices
+  name: com.microsoft.connecteddevices
+  items:
+  - uid: com.microsoft.connecteddevices.AsyncOperation
+    name: AsyncOperation
+  - uid: com.microsoft.connecteddevices.AsyncOperation.CompletionException
+    name: AsyncOperation.CompletionException
+    items:
+    - uid: com.microsoft.connecteddevices.AsyncOperation.CompletionException.CompletionException*
+      name: CompletionException
+      type: constructor
+  - uid: com.microsoft.connecteddevices.AsyncOperation.ResultBiConsumer
+    name: AsyncOperation.ResultBiConsumer
+  - uid: com.microsoft.connecteddevices.AsyncOperation.ResultBiFunction
+    name: AsyncOperation.ResultBiFunction
+  - uid: com.microsoft.connecteddevices.AsyncOperation.ResultConsumer
+    name: AsyncOperation.ResultConsumer
+  - uid: com.microsoft.connecteddevices.AsyncOperation.ResultFunction
+    name: AsyncOperation.ResultFunction
+  - uid: com.microsoft.connecteddevices.AsyncOperation.Supplier
+    name: AsyncOperation.Supplier
+  - uid: com.microsoft.connecteddevices.AsyncOperationWithProgress
+    name: AsyncOperationWithProgress
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenInvalidatedEventArgs
+    name: ConnectedDevicesAccessTokenInvalidatedEventArgs
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest
+    name: ConnectedDevicesAccessTokenRequest
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequestedEventArgs
+    name: ConnectedDevicesAccessTokenRequestedEventArgs
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccount
+    name: ConnectedDevicesAccount
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+    name: ConnectedDevicesAccountAddedStatus
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountManager
+    name: ConnectedDevicesAccountManager
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAccountType
+    name: ConnectedDevicesAccountType
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesAddAccountResult
+    name: ConnectedDevicesAddAccountResult
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesDiagnostics
+    name: ConnectedDevicesDiagnostics
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotification
+    name: ConnectedDevicesNotification
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistration
+    name: ConnectedDevicesNotificationRegistration
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationManager
+    name: ConnectedDevicesNotificationRegistrationManager
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationResult
+    name: ConnectedDevicesNotificationRegistrationResult
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationState
+    name: ConnectedDevicesNotificationRegistrationState
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+    name: ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStatus
+    name: ConnectedDevicesNotificationRegistrationStatus
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationType
+    name: ConnectedDevicesNotificationType
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesPlatform
+    name: ConnectedDevicesPlatform
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesPlatformSettings
+    name: ConnectedDevicesPlatformSettings
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesProcessNotificationOperation
+    name: ConnectedDevicesProcessNotificationOperation
+  - uid: com.microsoft.connecteddevices.ConnectedDevicesRemoveAccountResult
+    name: ConnectedDevicesRemoveAccountResult
+  - uid: com.microsoft.connecteddevices.Event
+    name: Event
+  - uid: com.microsoft.connecteddevices.EventListener
+    name: EventListener
+  - uid: com.microsoft.connecteddevices.EventSubscription
+    name: EventSubscription
+  - uid: com.microsoft.connecteddevices.SdkException
+    name: SdkException
+- uid: com.microsoft.connecteddevices.remotesystems
+  name: com.microsoft.connecteddevices.remotesystems
+  items:
+  - uid: com.microsoft.connecteddevices.remotesystems.AppServiceInfo
+    name: AppServiceInfo
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystem
+    name: RemoteSystem
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemAccountFilter
+    name: RemoteSystemAccountFilter
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemAddedEventArgs
+    name: RemoteSystemAddedEventArgs
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemApp
+    name: RemoteSystemApp
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemAuthorizationKind
+    name: RemoteSystemAuthorizationKind
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemAuthorizationKindFilter
+    name: RemoteSystemAuthorizationKindFilter
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemDiscoveryType
+    name: RemoteSystemDiscoveryType
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemDiscoveryTypeFilter
+    name: RemoteSystemDiscoveryTypeFilter
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemEnumerationCompletedEventArgs
+    name: RemoteSystemEnumerationCompletedEventArgs
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemFilter
+    name: RemoteSystemFilter
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemKindFilter
+    name: RemoteSystemKindFilter
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemKinds
+    name: RemoteSystemKinds
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemLocalVisibilityKind
+    name: RemoteSystemLocalVisibilityKind
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemLocalVisibilityKindFilter
+    name: RemoteSystemLocalVisibilityKindFilter
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemPlatform
+    name: RemoteSystemPlatform
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemPlatformFilter
+    name: RemoteSystemPlatformFilter
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemRemovedEventArgs
+    name: RemoteSystemRemovedEventArgs
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemStatus
+    name: RemoteSystemStatus
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemStatusType
+    name: RemoteSystemStatusType
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemStatusTypeFilter
+    name: RemoteSystemStatusTypeFilter
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemUpdatedEventArgs
+    name: RemoteSystemUpdatedEventArgs
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemWatcher
+    name: RemoteSystemWatcher
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemWatcherError
+    name: RemoteSystemWatcherError
+  - uid: com.microsoft.connecteddevices.remotesystems.RemoteSystemWatcherErrorOccurredEventArgs
+    name: RemoteSystemWatcherErrorOccurredEventArgs
+- uid: com.microsoft.connecteddevices.remotesystems.commanding
+  name: com.microsoft.connecteddevices.remotesystems.commanding
+  items:
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceClosedEventArgs
+    name: AppServiceClosedEventArgs
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceClosedStatus
+    name: AppServiceClosedStatus
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceConnection
+    name: AppServiceConnection
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceConnectionOpenedInfo
+    name: AppServiceConnectionOpenedInfo
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceConnectionStatus
+    name: AppServiceConnectionStatus
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceProvider
+    name: AppServiceProvider
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceRequest
+    name: AppServiceRequest
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceRequestReceivedEventArgs
+    name: AppServiceRequestReceivedEventArgs
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceResponse
+    name: AppServiceResponse
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.AppServiceResponseStatus
+    name: AppServiceResponseStatus
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.LaunchUriProvider
+    name: LaunchUriProvider
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteLauncher
+    name: RemoteLauncher
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteLauncherOptions
+    name: RemoteLauncherOptions
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteLaunchUriStatus
+    name: RemoteLaunchUriStatus
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemAppRegistration
+    name: RemoteSystemAppRegistration
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemAppRegistrationPublishResult
+    name: RemoteSystemAppRegistrationPublishResult
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemAppRegistrationPublishStatus
+    name: RemoteSystemAppRegistrationPublishStatus
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemConnectionInfo
+    name: RemoteSystemConnectionInfo
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.RemoteSystemConnectionRequest
+    name: RemoteSystemConnectionRequest
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.StatelessAppServiceResponse
+    name: StatelessAppServiceResponse
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.StatelessAppServiceResponseStatus
+    name: StatelessAppServiceResponseStatus
+- uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare
+  name: com.microsoft.connecteddevices.remotesystems.commanding.nearshare
+  items:
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareFileProvider
+    name: NearShareFileProvider
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareHelper
+    name: NearShareHelper
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareProgress
+    name: NearShareProgress
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareSender
+    name: NearShareSender
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareStatus
+    name: NearShareStatus
+  - uid: com.microsoft.connecteddevices.remotesystems.commanding.nearshare.NearShareStream
+    name: NearShareStream
+- uid: com.microsoft.connecteddevices.userdata
+  name: com.microsoft.connecteddevices.userdata
+  items:
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeed
+    name: UserDataFeed
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedNotificationTypes
+    name: UserDataFeedNotificationTypes
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedPlatforms
+    name: UserDataFeedPlatforms
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSubscribeResult
+    name: UserDataFeedSubscribeResult
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSubscribeStatus
+    name: UserDataFeedSubscribeStatus
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSubscription
+    name: UserDataFeedSubscription
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSyncScope
+    name: UserDataFeedSyncScope
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSyncScopeFlags
+    name: UserDataFeedSyncScopeFlags
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSyncStatus
+    name: UserDataFeedSyncStatus
+  - uid: com.microsoft.connecteddevices.userdata.UserDataFeedSyncStatusChangedEventArgs
+    name: UserDataFeedSyncStatusChangedEventArgs
+- uid: com.microsoft.connecteddevices.userdata.clipboard
+  name: com.microsoft.connecteddevices.userdata.clipboard
+  items:
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardChannel
+    name: ClipboardChannel
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItem
+    name: ClipboardItem
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemOriginFilters
+    name: ClipboardItemOriginFilters
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemSaveResult
+    name: ClipboardItemSaveResult
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemStateFilters
+    name: ClipboardItemStateFilters
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemStatus
+    name: ClipboardItemStatus
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardItemStatusChangedEventArgs
+    name: ClipboardItemStatusChangedEventArgs
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardReader
+    name: ClipboardReader
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardReaderDataChangedEventArgs
+    name: ClipboardReaderDataChangedEventArgs
+  - uid: com.microsoft.connecteddevices.userdata.clipboard.ClipboardReaderOptions
+    name: ClipboardReaderOptions
+- uid: com.microsoft.connecteddevices.userdata.useractivities
+  name: com.microsoft.connecteddevices.userdata.useractivities
+  items:
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivity
+    name: UserActivity
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivityAttribution
+    name: UserActivityAttribution
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivityChannel
+    name: UserActivityChannel
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivitySession
+    name: UserActivitySession
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivitySessionHistoryItem
+    name: UserActivitySessionHistoryItem
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivityState
+    name: UserActivityState
+  - uid: com.microsoft.connecteddevices.userdata.useractivities.UserActivityVisualElements
+    name: UserActivityVisualElements
+- uid: com.microsoft.connecteddevices.userdata.usernotifications
+  name: com.microsoft.connecteddevices.userdata.usernotifications
+  items:
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotification
+    name: UserNotification
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationChannel
+    name: UserNotificationChannel
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationPriority
+    name: UserNotificationPriority
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReader
+    name: UserNotificationReader
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReaderDataChangedEventArgs
+    name: UserNotificationReaderDataChangedEventArgs
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReaderOptions
+    name: UserNotificationReaderOptions
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReaderStartPosition
+    name: UserNotificationReaderStartPosition
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReadState
+    name: UserNotificationReadState
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationReadStateFilter
+    name: UserNotificationReadStateFilter
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationStatus
+    name: UserNotificationStatus
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationStatusFilter
+    name: UserNotificationStatusFilter
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationUpdateResult
+    name: UserNotificationUpdateResult
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationUserActionState
+    name: UserNotificationUserActionState
+  - uid: com.microsoft.connecteddevices.userdata.usernotifications.UserNotificationUserActionStateFilter
+    name: UserNotificationUserActionStateFilter

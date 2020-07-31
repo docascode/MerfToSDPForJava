@@ -1,0 +1,456 @@
+### YamlMime:ManagedReference
+items:
+- uid: com.microsoft.connecteddevices
+  id: connecteddevices
+  children:
+  - com.microsoft.connecteddevices.AsyncOperation
+  - com.microsoft.connecteddevices.AsyncOperation.CompletionException
+  - com.microsoft.connecteddevices.AsyncOperation.ResultBiConsumer
+  - com.microsoft.connecteddevices.AsyncOperation.ResultBiFunction
+  - com.microsoft.connecteddevices.AsyncOperation.ResultConsumer
+  - com.microsoft.connecteddevices.AsyncOperation.ResultFunction
+  - com.microsoft.connecteddevices.AsyncOperation.Supplier
+  - com.microsoft.connecteddevices.AsyncOperationWithProgress
+  - com.microsoft.connecteddevices.ConnectedDevicesAccessTokenInvalidatedEventArgs
+  - com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest
+  - com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequestedEventArgs
+  - com.microsoft.connecteddevices.ConnectedDevicesAccount
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountManager
+  - com.microsoft.connecteddevices.ConnectedDevicesAccountType
+  - com.microsoft.connecteddevices.ConnectedDevicesAddAccountResult
+  - com.microsoft.connecteddevices.ConnectedDevicesDiagnostics
+  - com.microsoft.connecteddevices.ConnectedDevicesNotification
+  - com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistration
+  - com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationManager
+  - com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationResult
+  - com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationState
+  - com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+  - com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStatus
+  - com.microsoft.connecteddevices.ConnectedDevicesNotificationType
+  - com.microsoft.connecteddevices.ConnectedDevicesPlatform
+  - com.microsoft.connecteddevices.ConnectedDevicesPlatformSettings
+  - com.microsoft.connecteddevices.ConnectedDevicesProcessNotificationOperation
+  - com.microsoft.connecteddevices.ConnectedDevicesRemoveAccountResult
+  - com.microsoft.connecteddevices.Event
+  - com.microsoft.connecteddevices.EventListener
+  - com.microsoft.connecteddevices.EventSubscription
+  - com.microsoft.connecteddevices.SdkException
+  href: com.microsoft.connecteddevices.yml
+  langs:
+  - java
+  name: com.microsoft.connecteddevices
+  nameWithType: com.microsoft.connecteddevices
+  fullName: com.microsoft.connecteddevices
+  type: Namespace
+  source:
+    remote:
+      path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/AsyncOperation.java
+      branch: release/1.4.0
+      repo: https://microsoft.visualstudio.com/DefaultCollection/OS/_git/cdp
+    path: sdk/converged/projections/android/src/connecteddevices/java/com/microsoft/connecteddevices/AsyncOperation.java
+    startLine: 4
+  syntax:
+    content: package com.microsoft.connecteddevices
+references:
+- uid: com.microsoft.connecteddevices.remotesystems
+  href: com.microsoft.connecteddevices.remotesystems.yml
+  name: com.microsoft.connecteddevices.remotesystems
+  nameWithType: com.microsoft.connecteddevices.remotesystems
+  fullName: com.microsoft.connecteddevices.remotesystems
+  type: Namespace
+  syntax:
+    content: package com.microsoft.connecteddevices.remotesystems
+- uid: com.microsoft.connecteddevices.userdata
+  href: com.microsoft.connecteddevices.userdata.yml
+  name: com.microsoft.connecteddevices.userdata
+  nameWithType: com.microsoft.connecteddevices.userdata
+  fullName: com.microsoft.connecteddevices.userdata
+  type: Namespace
+  syntax:
+    content: package com.microsoft.connecteddevices.userdata
+- uid: com.microsoft.connecteddevices.AsyncOperation
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.AsyncOperation.yml
+  name: AsyncOperation<T>
+  nameWithType: AsyncOperation<T>
+  fullName: com.microsoft.connecteddevices.AsyncOperation<T>
+  type: Class
+  summary: "<p>An operation that has a future result of type T or a possible exception. This class is a slightly simplified version of the android api level 24 CompletableFuture class </p>\r\n<p>Implements the standard <a href=\"https://docs.oracle.com/javase/8/docs/api/?java/util/concurrent/Future.html\">Future</a> interface, and also provides basic continuation functionality. Please see <a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html\">CompletableFuture</a> for detailed information on the how to use this class.</p>\r\n<p>The important differences between CompletableFuture and AsyncOperation are as follows: 1. AsyncOperation's default asynchronous executor is Executors.newCachedThreadPool() whereas CompletableFuture uses ForkJoinPool.commonPool(). 2. AsyncOperation lacks obtrudeException and obtrudeValue methods. </p>"
+  syntax:
+    content: public class AsyncOperation<T>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+- uid: com.microsoft.connecteddevices.AsyncOperationWithProgress
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.AsyncOperationWithProgress.yml
+  name: AsyncOperationWithProgress<T,P>
+  nameWithType: AsyncOperationWithProgress<T,P>
+  fullName: com.microsoft.connecteddevices.AsyncOperationWithProgress<T,P>
+  type: Class
+  summary: "<p>Version of AsyncOperation that can provide progress via the Progress event. </p>"
+  syntax:
+    content: public class AsyncOperationWithProgress<T,P> extends AsyncOperation<T>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+    - id: P
+      type: db9ec244
+      description: <p>Type of progress information </p>
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenInvalidatedEventArgs
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenInvalidatedEventArgs.yml
+  name: ConnectedDevicesAccessTokenInvalidatedEventArgs
+  nameWithType: ConnectedDevicesAccessTokenInvalidatedEventArgs
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenInvalidatedEventArgs
+  type: Class
+  summary: "<p>Returned by <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesAccount\" data-throw-if-not-resolved=\"false\">#AccessTokenInvalidated</xref> to inform that the token associated with <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesAccount\" data-throw-if-not-resolved=\"false\">ConnectedDevicesAccount</xref> reported token error for the contained scopes. Token provider needs to either refresh their token cache or potentially pop up UI to ask user to sign in in order to fix their account setup. </p>"
+  syntax:
+    content: public class ConnectedDevicesAccessTokenInvalidatedEventArgs
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest.yml
+  name: ConnectedDevicesAccessTokenRequest
+  nameWithType: ConnectedDevicesAccessTokenRequest
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest
+  type: Class
+  summary: "<p>Request for an access token for the contained <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesAccount\" data-throw-if-not-resolved=\"false\">ConnectedDevicesAccount</xref> which satisfies the contained scopes. This request needs to completed by calling either <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest.completeWithAccessToken(@NonNull final String)\" data-throw-if-not-resolved=\"false\">completeWithAccessToken</xref> or <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest.completeWithErrorMessage(@NonNull final String)\" data-throw-if-not-resolved=\"false\">completeWithErrorMessage</xref>. </p>"
+  syntax:
+    content: public class ConnectedDevicesAccessTokenRequest
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequestedEventArgs
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequestedEventArgs.yml
+  name: ConnectedDevicesAccessTokenRequestedEventArgs
+  nameWithType: ConnectedDevicesAccessTokenRequestedEventArgs
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequestedEventArgs
+  type: Class
+  summary: "<p>Returned by <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesAccount\" data-throw-if-not-resolved=\"false\">#AccessTokenRequested</xref> fired when there is a need to request a token. Contains the <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesAccessTokenRequest\" data-throw-if-not-resolved=\"false\">ConnectedDevicesAccessTokenRequest</xref>. </p>"
+  syntax:
+    content: public class ConnectedDevicesAccessTokenRequestedEventArgs
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccount
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccount.yml
+  name: ConnectedDevicesAccount
+  nameWithType: ConnectedDevicesAccount
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccount
+  type: Class
+  summary: "<p>This class represents a single user account known by an app. </p>"
+  syntax:
+    content: public class ConnectedDevicesAccount
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.yml
+  name: ConnectedDevicesAccountAddedStatus
+  nameWithType: ConnectedDevicesAccountAddedStatus
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus
+  type: Enum
+  summary: "<p>Contains the values that describe the add account operation status </p>"
+  syntax:
+    content: public enum ConnectedDevicesAccountAddedStatus
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountManager
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountManager.yml
+  name: ConnectedDevicesAccountManager
+  nameWithType: ConnectedDevicesAccountManager
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountManager
+  type: Class
+  summary: "<p>Provides a single entrypoint for all account-related features in the SDK. </p>"
+  syntax:
+    content: public class ConnectedDevicesAccountManager
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAccountType
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesAccountType.yml
+  name: ConnectedDevicesAccountType
+  nameWithType: ConnectedDevicesAccountType
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountType
+  type: Enum
+  summary: "<p>Contains values that describe the type of Microsoft-provided user account. </p>"
+  syntax:
+    content: public enum ConnectedDevicesAccountType
+- uid: com.microsoft.connecteddevices.ConnectedDevicesAddAccountResult
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesAddAccountResult.yml
+  name: ConnectedDevicesAddAccountResult
+  nameWithType: ConnectedDevicesAddAccountResult
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesAddAccountResult
+  type: Class
+  summary: "<p>Result of <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesAccountManager\" data-throw-if-not-resolved=\"false\">#addAccountAsync</xref></p>"
+  syntax:
+    content: public class ConnectedDevicesAddAccountResult
+- uid: com.microsoft.connecteddevices.ConnectedDevicesDiagnostics
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesDiagnostics.yml
+  name: ConnectedDevicesDiagnostics
+  nameWithType: ConnectedDevicesDiagnostics
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesDiagnostics
+  type: Class
+  summary: "<p>Manages diagnostic information from the Connected Devices platform. Not intended for general use. </p>"
+  syntax:
+    content: public class ConnectedDevicesDiagnostics
+- uid: com.microsoft.connecteddevices.ConnectedDevicesNotification
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesNotification.yml
+  name: ConnectedDevicesNotification
+  nameWithType: ConnectedDevicesNotification
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesNotification
+  type: Class
+  summary: "<p>Object that represents an incoming notification to be processed by the Connected Devices Platform </p>"
+  syntax:
+    content: public class ConnectedDevicesNotification
+- uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistration
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistration.yml
+  name: ConnectedDevicesNotificationRegistration
+  nameWithType: ConnectedDevicesNotificationRegistration
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistration
+  type: Class
+  summary: "<p>This class represents the app's registration with a push notification service (necessary for some Connected Devices scenarios). It conveys this information to the Connected Devices Platform. </p>"
+  syntax:
+    content: public class ConnectedDevicesNotificationRegistration
+- uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationManager
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationManager.yml
+  name: ConnectedDevicesNotificationRegistrationManager
+  nameWithType: ConnectedDevicesNotificationRegistrationManager
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationManager
+  type: Class
+  summary: "<p>Manages push notification registration with the ConnectedDevicesPlatform for each account. </p>"
+  syntax:
+    content: public class ConnectedDevicesNotificationRegistrationManager
+- uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationResult
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationResult.yml
+  name: ConnectedDevicesNotificationRegistrationResult
+  nameWithType: ConnectedDevicesNotificationRegistrationResult
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationResult
+  type: Class
+  summary: "<p>Result of <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationManager\" data-throw-if-not-resolved=\"false\">#registerAsync</xref></p>"
+  syntax:
+    content: public class ConnectedDevicesNotificationRegistrationResult
+- uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationState
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationState.yml
+  name: ConnectedDevicesNotificationRegistrationState
+  nameWithType: ConnectedDevicesNotificationRegistrationState
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationState
+  type: Enum
+  summary: "<p>Values used to communicate the status of cloud registration. </p>"
+  syntax:
+    content: public enum ConnectedDevicesNotificationRegistrationState
+- uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStateChangedEventArgs.yml
+  name: ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+  nameWithType: ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+  type: Class
+  summary: "<p>Event Args class for the RemoteSystemAppRegistration State Changed event. This is used as part of the <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesPlatform\" data-throw-if-not-resolved=\"false\">ConnectedDevicesPlatform</xref> to ensure that the application gets informed about new ConnectedDevices messages via the correct notification mechanism. </p>"
+  syntax:
+    content: public class ConnectedDevicesNotificationRegistrationStateChangedEventArgs
+- uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStatus
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStatus.yml
+  name: ConnectedDevicesNotificationRegistrationStatus
+  nameWithType: ConnectedDevicesNotificationRegistrationStatus
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesNotificationRegistrationStatus
+  type: Enum
+  summary: "<p>Contains the values that describe the notifcation registration operation status The error statuses indicate transient conditions where the app developer may want to retry registering. </p>"
+  syntax:
+    content: public enum ConnectedDevicesNotificationRegistrationStatus
+- uid: com.microsoft.connecteddevices.ConnectedDevicesNotificationType
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesNotificationType.yml
+  name: ConnectedDevicesNotificationType
+  nameWithType: ConnectedDevicesNotificationType
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesNotificationType
+  type: Enum
+  summary: "<p>Contains values that describe the type (service) of a notification. </p>"
+  syntax:
+    content: public enum ConnectedDevicesNotificationType
+- uid: com.microsoft.connecteddevices.ConnectedDevicesPlatform
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesPlatform.yml
+  name: ConnectedDevicesPlatform
+  nameWithType: ConnectedDevicesPlatform
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesPlatform
+  type: Class
+  summary: "<p>A class to represent the Connected Devices Platform and manage the app's connection to it. </p>"
+  syntax:
+    content: public class ConnectedDevicesPlatform
+- uid: com.microsoft.connecteddevices.ConnectedDevicesPlatformSettings
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesPlatformSettings.yml
+  name: ConnectedDevicesPlatformSettings
+  nameWithType: ConnectedDevicesPlatformSettings
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesPlatformSettings
+  type: Class
+  summary: "<p>Allows application developers to provide initial settings to the ConnectedDevices platform. </p>"
+  syntax:
+    content: public class ConnectedDevicesPlatformSettings
+- uid: com.microsoft.connecteddevices.ConnectedDevicesProcessNotificationOperation
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesProcessNotificationOperation.yml
+  name: ConnectedDevicesProcessNotificationOperation
+  nameWithType: ConnectedDevicesProcessNotificationOperation
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesProcessNotificationOperation
+  type: Class
+  summary: "<p>The result of giving a notification to the Rome platform for processing. <xrefsect id=\"deprecated_1_deprecated000006\"><xreftitle>Deprecated</xreftitle><xrefdescription><p>Use ConnectedDevicesNotification instead </p></xrefdescription></xrefsect></p>"
+  syntax:
+    content: public class ConnectedDevicesProcessNotificationOperation
+- uid: com.microsoft.connecteddevices.ConnectedDevicesRemoveAccountResult
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.ConnectedDevicesRemoveAccountResult.yml
+  name: ConnectedDevicesRemoveAccountResult
+  nameWithType: ConnectedDevicesRemoveAccountResult
+  fullName: com.microsoft.connecteddevices.ConnectedDevicesRemoveAccountResult
+  type: Class
+  summary: "<p>Result of <xref uid=\"com.microsoft.connecteddevices.ConnectedDevicesAccountManager\" data-throw-if-not-resolved=\"false\">#removeAccountAsync</xref></p>"
+  syntax:
+    content: public class ConnectedDevicesRemoveAccountResult
+- uid: com.microsoft.connecteddevices.Event
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.Event.yml
+  name: Event<T,R>
+  nameWithType: Event<T,R>
+  fullName: com.microsoft.connecteddevices.Event<T,R>
+  type: Interface
+  summary: "<p>This interface provides a simple eventing model. Events produce items consumed by EventListeners. The flow of event items is controlled by the EventSubscription. </p>"
+  syntax:
+    content: public interface Event<T,R>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+      description: <p>the event source object type </p>
+    - id: R
+      type: d4d3e1e1
+      description: <p>the event argument type </p>
+- uid: com.microsoft.connecteddevices.EventListener
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.EventListener.yml
+  name: EventListener<T,R>
+  nameWithType: EventListener<T,R>
+  fullName: com.microsoft.connecteddevices.EventListener<T,R>
+  type: Interface
+  summary: "<p>This interface provides a simple event-handling method. It allows listeners to be registered to methods through the use of lambda expressions (available in Java 8). Because lambda expressions and anonymous classes allow implicit capture of variables in the enclosing scope, it is important to remember to either use WeakReferences or always ensure to call EventSubscription.cancel to ensure proper cleanup of resources. </p>"
+  syntax:
+    content: public interface EventListener<T,R>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+      description: <p>the event source object type </p>
+    - id: R
+      type: d4d3e1e1
+      description: <p>the event argument type </p>
+- uid: com.microsoft.connecteddevices.EventSubscription
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.EventSubscription.yml
+  name: EventSubscription
+  nameWithType: EventSubscription
+  fullName: com.microsoft.connecteddevices.EventSubscription
+  type: Interface
+  summary: "<p>This interface provides a simple event subscription </p>"
+  syntax:
+    content: public interface EventSubscription
+- uid: com.microsoft.connecteddevices.SdkException
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.SdkException.yml
+  name: SdkException
+  nameWithType: SdkException
+  fullName: com.microsoft.connecteddevices.SdkException
+  type: Class
+  summary: "<p>Exception used to communicate a failure from the Connected Devices Platform SDK. This is an unchecked exception that will be thrown for unexpected platform-related errors. </p>"
+  syntax:
+    content: public class SdkException
+- uid: com.microsoft.connecteddevices.AsyncOperation.CompletionException
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.AsyncOperation.CompletionException.yml
+  name: AsyncOperation.CompletionException
+  nameWithType: AsyncOperation.CompletionException
+  fullName: com.microsoft.connecteddevices.AsyncOperation.CompletionException
+  type: Class
+  summary: "<p>Unchecked exception that holds the exception that caused the operation to complete exceptionally. </p>\r\n<p>Used like <xref uid=\"\" data-throw-if-not-resolved=\"false\">ExecutionException</xref> except that it is unchecked so that it can propagate to dependent operations without needing to know the full set of exceptions / requiring all exception observing continuations to declare that they may throw the ExecutionException. </p>"
+  syntax:
+    content: public class CompletionException
+- uid: com.microsoft.connecteddevices.AsyncOperation.ResultBiConsumer
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.AsyncOperation.ResultBiConsumer.yml
+  name: AsyncOperation.ResultBiConsumer<T,U>
+  nameWithType: AsyncOperation.ResultBiConsumer<T,U>
+  fullName: com.microsoft.connecteddevices.AsyncOperation.ResultBiConsumer<T,U>
+  type: Interface
+  summary: "<p>Represents an action to be invoked after an AsyncOperation is done. Notably, this functional interface is used when two invocation arguments are used like with AsyncOperation.whenComplete. </p>\r\n<p>This is a functional interface equivalent to android's BiConsumer interface </p>"
+  syntax:
+    content: public interface ResultBiConsumer<T,U>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+      description: <p>First argument type </p>
+    - id: U
+      type: 6043614c
+      description: <p>Second argument type </p>
+- uid: com.microsoft.connecteddevices.AsyncOperation.ResultBiFunction
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.AsyncOperation.ResultBiFunction.yml
+  name: AsyncOperation.ResultBiFunction<T,U,R>
+  nameWithType: AsyncOperation.ResultBiFunction<T,U,R>
+  fullName: com.microsoft.connecteddevices.AsyncOperation.ResultBiFunction<T,U,R>
+  type: Interface
+  summary: "<p>Represents a function to be invoked after an AsyncOperation is done. Notably, this functional interface is used when only two arguments are needed and a result is produced, like with AsyncOperation.handleAsync </p>\r\n<p>This is a functional interface equivalent to android's BiFunction interface </p>"
+  syntax:
+    content: public interface ResultBiFunction<T,U,R>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+      description: <p>First argument type </p>
+    - id: U
+      type: 6043614c
+      description: <p>Second argument type </p>
+    - id: R
+      type: d4d3e1e1
+      description: <p>Result type </p>
+- uid: com.microsoft.connecteddevices.AsyncOperation.ResultConsumer
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.AsyncOperation.ResultConsumer.yml
+  name: AsyncOperation.ResultConsumer<T>
+  nameWithType: AsyncOperation.ResultConsumer<T>
+  fullName: com.microsoft.connecteddevices.AsyncOperation.ResultConsumer<T>
+  type: Interface
+  summary: "<p>Represents an action to be invoked after an AsyncOperation is done. Notably, this functional interface is used when only a single argument is needed like with AsyncOperation.thenAccept. </p>\r\n<p>This is a functional interface equivalent to android's Consumer interface </p>"
+  syntax:
+    content: public interface ResultConsumer<T>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+      description: <p>First argument type </p>
+- uid: com.microsoft.connecteddevices.AsyncOperation.ResultFunction
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.AsyncOperation.ResultFunction.yml
+  name: AsyncOperation.ResultFunction<T,R>
+  nameWithType: AsyncOperation.ResultFunction<T,R>
+  fullName: com.microsoft.connecteddevices.AsyncOperation.ResultFunction<T,R>
+  type: Interface
+  summary: "<p>Represents a function to be invoked after an AsyncOperation is done. Notably, this functional interface is used when only a singe argument is needed and a result is produced, like with AsyncOperation.thenApply </p>\r\n<p>This is a functional interface equivalent to android's Function interface </p>"
+  syntax:
+    content: public interface ResultFunction<T,R>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+      description: <p>First argument type </p>
+    - id: R
+      type: d4d3e1e1
+      description: <p>Result type </p>
+- uid: com.microsoft.connecteddevices.AsyncOperation.Supplier
+  parent: com.microsoft.connecteddevices
+  href: com.microsoft.connecteddevices.AsyncOperation.Supplier.yml
+  name: AsyncOperation.Supplier<T>
+  nameWithType: AsyncOperation.Supplier<T>
+  fullName: com.microsoft.connecteddevices.AsyncOperation.Supplier<T>
+  type: Interface
+  summary: "<p>Represents a function that supplies a T value (not necessarily new/distinct) when asked. </p>\r\n<p>This is a functional interface equivalent to android's Supplier interface </p>"
+  syntax:
+    content: public interface Supplier<T>
+    typeParameters:
+    - id: T
+      type: 8ce1ecb9
+      description: <p>Type of object supplied </p>

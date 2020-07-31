@@ -1,6 +1,7 @@
 ﻿namespace MerfToSDPForJava
 {
     using System.Linq;
+
     public static class StringExtensions
     {
         /// <summary>Defaults to <see cref="F:System.IO.Path.DirectorySeparatorChar"/>.

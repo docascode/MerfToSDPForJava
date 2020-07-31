@@ -15,6 +15,8 @@
         {
             var opt = new CommandLineOptions();
             var context = new BuildContext();
+
+            ///Track the newly generated SDP file. Key is the uid of its parent node, and value is its corresponding TocItemYaml.
             var tocTracker = new ConcurrentDictionary<string, List<TocItemYaml>>();
 
             var procedure = new StepCollection(
@@ -39,6 +41,7 @@
 
                     procedure.RunAsync(context).Wait();
                     status = 0;
+                   
                 }
             }
             catch (Exception ex)
@@ -49,7 +52,9 @@
             {
                 watch.Stop();
             }
+           
             var statusString = status == 0 ? "Succeeded" : "Failed";
+            Console.WriteLine($" the files have been generated to { opt.OutputFolder}/SDPYml");
             Console.WriteLine($"{statusString} in {watch.ElapsedMilliseconds} milliseconds.");
             return status;
         }

@@ -11,7 +11,7 @@
     {
         public string StepName
         {
-            get { return "TocToSDP"; }
+            get { return "GenerateToc"; }
         }
         public Task RunAsync(BuildContext context)
         {

@@ -79,7 +79,7 @@
             var result = uid;
             foreach (var child in xrefExpressionList)
             {
-                if (!child.Interpreter(pageModel, uid, out result))
+                if (!child.Interpret(pageModel, uid, out result))
                 {
                     break;
                 }

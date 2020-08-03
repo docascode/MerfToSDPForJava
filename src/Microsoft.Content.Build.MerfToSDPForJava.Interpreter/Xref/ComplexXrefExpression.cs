@@ -6,7 +6,7 @@
 
     public class ComplexXrefExpression : XrefAbstractExpression
     {
-        public override bool Interpreter(PageModel pageModel, string uid, out string result)
+        public override bool Interpret(PageModel pageModel, string uid, out string result)
         {
             result = null;
             if (pageModel == null || pageModel.References == null || string.IsNullOrEmpty(uid))

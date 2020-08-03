@@ -4,7 +4,7 @@
 
     public abstract class XrefAbstractExpression
     {
-        public virtual bool Interpreter(PageModel pageModel, string uid, out string result)
+        public virtual bool Interpret(PageModel pageModel, string uid, out string result)
         {
             result = null;
             return true;

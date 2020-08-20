@@ -33,8 +33,6 @@
 
             typeSDPModel.Implements?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
             typeSDPModel.Inheritances?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
-            typeSDPModel.InheritedMembers?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
-
         }
         public static void PropertyToXrefString(this MemberSDPModel memberSDPModel, PageModel pageModel)
         {
@@ -42,8 +40,7 @@
                 return;
 
             foreach (var member in memberSDPModel.Members)
-            {
-                member.Overridden = InterpretXref(pageModel, member.Overridden) ?? (member.Overridden ?? null);
+            {             
                 member.Parameters = member.Parameters?.Select(p => { return new Parameter() { Name = p.Name, Type = InterpretXref(pageModel, p.Type) ?? p.Type ?? null, Description = p.Description }; });
 
                 if (member.Returns != null)
@@ -58,13 +55,11 @@
                 return;
             enumSDPModel.Implements?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
             enumSDPModel.Inheritances?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
-            enumSDPModel.InheritedMembers?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
 
             if (enumSDPModel.Methods != null)
             {
                 foreach (var method in enumSDPModel.Methods)
                 {
-                    method.Overridden = InterpretXref(pageModel, method.Overridden) ?? method.Overridden ?? null;
                     method.Parameters = method.Parameters?.Select(p => { return new Parameter() { Name = p.Name, Type = InterpretXref(pageModel, p.Type ?? null) ?? p.Type, Description = p.Description }; });
 
                     if (method.Returns != null)

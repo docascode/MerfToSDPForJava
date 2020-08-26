@@ -42,6 +42,11 @@
             return deserializer.Value.Deserialize<T>(reader);
         }
 
+        public static string EncodeXrefLink(string uid)
+        {
+            return $"<xref href=\"{uid}\" data-throw-if-not-resolved=\"False\"/>";
+        }
+
         public static string EncodeXrefLink(string text, string uid, string altText = null)
         {
             return $"<xref href=\"{uid ?? UrlEncodeLinkText(text)}?alt={altText ?? uid}&text={UrlEncodeLinkText(text)}\" data-throw-if-not-resolved=\"False\"/>";

@@ -35,7 +35,7 @@
                 enumSDPModel.InheritedMembers = enumItem.InheritedMembers;
                 enumSDPModel.Methods = TransferMethods(pageModel.Items);
                 enumSDPModel.Fields = TransferFields(pageModel.Items);
-
+                enumSDPModel.Implements = enumItem.Implements;
                 enumSDPModel.PropertyToXrefString(pageModel);
                 base.Save(enumSDPModel, enumSDPModel.YamlMime, enumSDPModel.Uid);
 
@@ -93,6 +93,7 @@
                 enumMethod.Parameters = TransferParameters(method.Syntax);
                 enumMethod.Summary = method.Summary;
                 enumMethod.Syntax = TransferSyntax(method.Syntax);
+                enumMethod.Exceptions = TransferExceptions(method.Exceptions);
                 enumMethod.Returns = TransferReturns(method.Syntax);
                 enumMethod.Uid = method.Uid;
                 enumMethods.Add(enumMethod);

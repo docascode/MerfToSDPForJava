@@ -9,5 +9,7 @@
             result = null;
             return true;
         }
+
+        abstract public bool Interpreting(PageModel pageModel, string uid, out string result);
     }
 }

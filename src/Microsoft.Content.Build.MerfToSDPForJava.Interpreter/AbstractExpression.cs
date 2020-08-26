@@ -55,6 +55,7 @@
             member.NameWithType = articleItemYaml.NameWithType;
             member.Overridden = articleItemYaml.Overridden;
             member.Parameters = TransferParameters(articleItemYaml.Syntax);
+            member.Exceptions = TransferExceptions(articleItemYaml.Exceptions);
             member.Returns = TransferReturns(articleItemYaml.Syntax);
             member.Syntax = TransferSyntax(articleItemYaml.Syntax);
             member.Summary = articleItemYaml.Summary;
@@ -134,6 +135,14 @@
             if (syntax == null)
                 return null;
             return syntax.Content;
+        }
+
+        protected IEnumerable<ExceptionType> TransferExceptions(List<CrefInfo> exceptions)
+        {
+            if (exceptions == null)
+                return null;
+
+            return exceptions.Select(i => new ExceptionType() { Type = i.Type });
         }
     }
 }

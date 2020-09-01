@@ -78,7 +78,7 @@
             var memberSDPModel = new MemberSDPModel();
             memberSDPModel.FullName = articleItemYaml.FullName;
             memberSDPModel.Name = articleItemYaml.Name;
-            memberSDPModel.NameWithType = articleItemYaml.NameWithType;
+            memberSDPModel.NameWithType = articleItemYaml.NameWithType.RemoveFromValue("(");
             memberSDPModel.Uid = articleItemYaml.Uid;
             memberSDPModel.Type = articleItemYaml.Type.ToString().ToLower();
             memberSDPModel.Package = articleItemYaml.PackageName;

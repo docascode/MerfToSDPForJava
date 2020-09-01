@@ -26,10 +26,10 @@
                 var enumSDPModel = new EnumSDPModel();
                 enumSDPModel.Uid = enumItem.Uid;
                 enumSDPModel.FullName = enumSDPModel.FullName;
-                enumSDPModel.Name = enumItem.Name;
+                enumSDPModel.Name = enumItem.Name ;
                 enumSDPModel.Package = enumItem.PackageName;
                 enumSDPModel.Summary = enumItem.Summary;
-                enumSDPModel.NameWithType = enumItem.NameWithType;
+                enumSDPModel.NameWithType = enumItem.NameWithType.RemoveFromValue("(");
                 enumSDPModel.Syntax = TransferSyntax(enumItem.Syntax);
                 enumSDPModel.Inheritances = ConvertStringToInlineMD(enumItem.Inheritance);
                 enumSDPModel.InheritedMembers = enumItem.InheritedMembers;

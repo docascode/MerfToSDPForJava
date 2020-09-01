@@ -32,6 +32,7 @@
 
             typeSDPModel.Implements = typeSDPModel.Implements?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
             typeSDPModel.Inheritances = typeSDPModel.Inheritances?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
+
         }
         public static void PropertyToXrefString(this MemberSDPModel memberSDPModel, PageModel pageModel)
         {
@@ -52,6 +53,7 @@
         {
             if (enumSDPModel == null)
                 return;
+
             enumSDPModel.Implements = enumSDPModel.Implements?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
             enumSDPModel.Inheritances = enumSDPModel.Inheritances?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
 

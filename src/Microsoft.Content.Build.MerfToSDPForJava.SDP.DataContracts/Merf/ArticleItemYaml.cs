@@ -102,6 +102,9 @@
         [YamlMember(Alias = "conceptual")]
         public string Conceptual { get; set; }
 
+        [YamlMember(Alias = "implements")]
+        public List<string> Implements { get; set; }
+
         [EditorBrowsable(EditorBrowsableState.Never)]
         [YamlIgnore]
         public List<SpecializedType> ImplementsOrInherits { get; set; } = new List<SpecializedType>();

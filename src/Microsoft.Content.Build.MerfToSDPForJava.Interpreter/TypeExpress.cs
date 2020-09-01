@@ -36,6 +36,7 @@
                 objType.Summary = typeItem.Summary;
                 objType.Syntax = TransferSyntax(typeItem.Syntax);
                 objType.Type = typeItem.Type?.ToString().ToLower();
+                objType.Implements = typeItem.Implements;
                 objType.TypeParameters = TransferTypeParameters(typeItem.Syntax);
                 objType.Uid = typeItem.Uid;
                 

@@ -50,5 +50,11 @@
             return true;
         }
 
+        public override bool Interpreting(PageModel pageModel, string uid, out string result)
+        {
+            result = null;
+            return true;
+        }
+
     }
 }

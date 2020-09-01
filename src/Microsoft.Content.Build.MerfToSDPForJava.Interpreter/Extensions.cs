@@ -9,8 +9,7 @@
     {
         private static readonly List<XrefAbstractExpression> xrefExpressionList = new List<XrefAbstractExpression>()
             {
-                new SingletonXrefExpression(),
-                new ComplexXrefExpression()
+                new SingletonXrefExpression()
             };
 
         public static string RemoveFromValue(this string str, string startValue)
@@ -31,8 +30,9 @@
             if (typeSDPModel == null)
                 return;
 
-            typeSDPModel.Implements?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
-            typeSDPModel.Inheritances?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
+            typeSDPModel.Implements = typeSDPModel.Implements?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
+            typeSDPModel.Inheritances = typeSDPModel.Inheritances?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
+
         }
         public static void PropertyToXrefString(this MemberSDPModel memberSDPModel, PageModel pageModel)
         {
@@ -53,8 +53,9 @@
         {
             if (enumSDPModel == null)
                 return;
-            enumSDPModel.Implements?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
-            enumSDPModel.Inheritances?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
+
+            enumSDPModel.Implements = enumSDPModel.Implements?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
+            enumSDPModel.Inheritances = enumSDPModel.Inheritances?.Select(i => { return i = InterpretXref(pageModel, i) ?? i; });
 
             if (enumSDPModel.Methods != null)
             {
@@ -74,7 +75,7 @@
             var result = uid;
             foreach (var child in xrefExpressionList)
             {
-                if (!child.Interpret(pageModel, uid, out result))
+                if (!child.Interpreting(pageModel, uid, out result))
                 {
                     break;
                 }

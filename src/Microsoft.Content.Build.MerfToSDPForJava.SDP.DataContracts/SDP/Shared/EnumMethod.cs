@@ -25,6 +25,10 @@
         [YamlMember(Alias = "parameters")]
         public IEnumerable<Parameter> Parameters { get; set; }
 
+        [JsonProperty("exceptions")]
+        [YamlMember(Alias = "exceptions")]
+        public IEnumerable<ExceptionType> Exceptions { get; set; }
+
         [JsonProperty("returns")]
         [YamlMember(Alias = "returns")]
         public Return Returns { get; set; }

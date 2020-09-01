@@ -27,7 +27,7 @@
                 return true;
 
             var methodsOverLoading = methods.Where(item => item != null && item.Overload != null && item.Overload.EndsWith('*'))?.ToList();
-            if (methodsOverLoading != null)
+            if (methodsOverLoading == null)
             {
                 return true;
             }
@@ -78,7 +78,7 @@
             var memberSDPModel = new MemberSDPModel();
             memberSDPModel.FullName = articleItemYaml.FullName;
             memberSDPModel.Name = articleItemYaml.Name;
-            memberSDPModel.NameWithType = articleItemYaml.NameWithType;
+            memberSDPModel.NameWithType = articleItemYaml.NameWithType.RemoveFromValue("(");
             memberSDPModel.Uid = articleItemYaml.Uid;
             memberSDPModel.Type = articleItemYaml.Type.ToString().ToLower();
             memberSDPModel.Package = articleItemYaml.PackageName;

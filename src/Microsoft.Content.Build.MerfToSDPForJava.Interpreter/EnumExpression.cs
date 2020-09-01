@@ -26,16 +26,16 @@
                 var enumSDPModel = new EnumSDPModel();
                 enumSDPModel.Uid = enumItem.Uid;
                 enumSDPModel.FullName = enumSDPModel.FullName;
-                enumSDPModel.Name = enumItem.Name;
+                enumSDPModel.Name = enumItem.Name ;
                 enumSDPModel.Package = enumItem.PackageName;
                 enumSDPModel.Summary = enumItem.Summary;
-                enumSDPModel.NameWithType = enumItem.NameWithType;
+                enumSDPModel.NameWithType = enumItem.NameWithType.RemoveFromValue("(");
                 enumSDPModel.Syntax = TransferSyntax(enumItem.Syntax);
                 enumSDPModel.Inheritances = ConvertStringToInlineMD(enumItem.Inheritance);
                 enumSDPModel.InheritedMembers = enumItem.InheritedMembers;
                 enumSDPModel.Methods = TransferMethods(pageModel.Items);
                 enumSDPModel.Fields = TransferFields(pageModel.Items);
-
+                enumSDPModel.Implements = enumItem.Implements;
                 enumSDPModel.PropertyToXrefString(pageModel);
                 base.Save(enumSDPModel, enumSDPModel.YamlMime, enumSDPModel.Uid);
 
@@ -93,6 +93,7 @@
                 enumMethod.Parameters = TransferParameters(method.Syntax);
                 enumMethod.Summary = method.Summary;
                 enumMethod.Syntax = TransferSyntax(method.Syntax);
+                enumMethod.Exceptions = TransferExceptions(method.Exceptions);
                 enumMethod.Returns = TransferReturns(method.Syntax);
                 enumMethod.Uid = method.Uid;
                 enumMethods.Add(enumMethod);

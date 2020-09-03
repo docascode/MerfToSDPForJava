@@ -33,7 +33,7 @@
                 namespaceSDPModel.Enums = TransferEnums(pageModel.References);
                 namespaceSDPModel.Interfaces = TransferInterfaces(pageModel.References);
 
-                base.Save(namespaceSDPModel, namespaceSDPModel.YamlMime, namespaceSDPModel.Uid);
+                base.Save(namespaceSDPModel, namespaceSDPModel.YamlMime, namespaceSDPModel.Uid, MemberType.Namespace.ToString());
 
                 List<AbstractExpression> expressions = new List<AbstractExpression>();
                 expressions.Add(new ConstructorExpression(_outputFolder, namespaceSDPModel.Uid));

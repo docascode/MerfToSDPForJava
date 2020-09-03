@@ -55,7 +55,7 @@
             foreach (var keyValuePair in keyValuePairs_methodOverloading)
             {
                 keyValuePair.Value.PropertyToXrefString(pageModel);
-                base.Save(keyValuePair.Value, keyValuePair.Value.YamlMime, keyValuePair.Key);
+                base.Save(keyValuePair.Value, keyValuePair.Value.YamlMime, keyValuePair.Key, keyValuePair.Value.Type);
                 var tocItem = new List<TocItemYaml>() {new TocItemYaml{
                     Uid = keyValuePair.Value.Uid,
                     Name = keyValuePair.Value.Name.RemoveFromValue("("),

@@ -21,15 +21,26 @@
             return true;
         }
 
-        protected virtual void Save(object obj, string comment, string fileName)
+        protected virtual void Save(object obj, string comment, string fileName, string memberType)
         {
             if (obj == null || string.IsNullOrEmpty(fileName))
             {
                 return;
             }
 
-            var fullFileName = fileName + Constants.Constants.YamlExtension;
-            string sdpymlfilePath = Path.Combine(StepUtility.GetSDPYmlOutputPath(_outputFolder), fullFileName);
+            string sdpymlfilePath = "";
+            string fullFileName = "", fullFileNameWithType = "";
+
+            fullFileName = fileName + Constants.Constants.YamlExtension;
+            fullFileNameWithType = (fileName + '-' + memberType ?? "") + Constants.Constants.YamlExtension;
+
+            sdpymlfilePath = Path.Combine(StepUtility.GetSDPYmlOutputPath(_outputFolder), fullFileName);
+
+            if (File.Exists(sdpymlfilePath))
+            {
+                sdpymlfilePath = Path.Combine(StepUtility.GetSDPYmlOutputPath(_outputFolder), fullFileNameWithType);
+            }
+
             YamlUtility.Serialize(sdpymlfilePath, obj, comment);
         }
         protected virtual bool Valid(PageModel pageModel)

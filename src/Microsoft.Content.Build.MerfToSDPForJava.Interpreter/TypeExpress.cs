@@ -41,7 +41,7 @@
                 objType.Uid = typeItem.Uid;
                 
                 objType.PropertyToXrefString(pageModel);
-                base.Save(objType, objType.YamlMime, objType.Uid);
+                base.Save(objType, objType.YamlMime, objType.Uid, objType.Type);
 
                 List<AbstractExpression> expressions = new List<AbstractExpression>();
                 expressions.Add(new ConstructorExpression(_outputFolder, objType.Uid));

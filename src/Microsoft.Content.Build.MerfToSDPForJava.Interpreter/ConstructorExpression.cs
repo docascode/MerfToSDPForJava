@@ -57,7 +57,7 @@
                 {
                     combinationSDPModel.PropertyToXrefString(pageModel);
                     var filename = constructor.Overload.Remove(constructor.Overload.Length - 1);
-                    base.Save(combinationSDPModel, combinationSDPModel.YamlMime, filename);
+                    base.Save(combinationSDPModel, combinationSDPModel.YamlMime, filename, combinationSDPModel.Type);
                     var tocItem = new List<TocItemYaml>() { new TocItemYaml()
                     {
                         Uid = constructor.Overload,
@@ -96,7 +96,7 @@
                 }
 
                 memberSDPModel.PropertyToXrefString(pageModel);
-                base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid); var tocItem = new List<TocItemYaml>() { new TocItemYaml()
+                base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid, memberSDPModel.Type); var tocItem = new List<TocItemYaml>() { new TocItemYaml()
                 {
                     Uid = memberSDPModel.Uid,
                     Name = memberSDPModel.Name.RemoveFromValue("("),

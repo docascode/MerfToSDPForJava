@@ -32,7 +32,7 @@
             string fullFileName = "", fullFileNameWithType = "";
 
             fullFileName = fileName + Constants.Constants.YamlExtension;
-            fullFileNameWithType = (fileName + '-' + memberType ?? "") + Constants.Constants.YamlExtension;
+            fullFileNameWithType = (fileName + '-' + (memberType == null ? "unknown" : memberType.ToLower())) + Constants.Constants.YamlExtension;
 
             sdpymlfilePath = Path.Combine(StepUtility.GetSDPYmlOutputPath(_outputFolder), fullFileName);
 

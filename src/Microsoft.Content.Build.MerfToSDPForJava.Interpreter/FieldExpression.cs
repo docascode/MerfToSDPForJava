@@ -44,7 +44,7 @@
                 }
 
                 memberSDPModel.PropertyToXrefString(pageModel);
-                base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid);
+                base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid, memberSDPModel.Type);
                 var tocItem = new List<TocItemYaml>() { new TocItemYaml
                 {
                     Uid = member.Uid,

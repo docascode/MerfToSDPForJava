@@ -37,7 +37,7 @@
                 enumSDPModel.Fields = TransferFields(pageModel.Items);
                 enumSDPModel.Implements = enumItem.Implements;
                 enumSDPModel.PropertyToXrefString(pageModel);
-                base.Save(enumSDPModel, enumSDPModel.YamlMime, enumSDPModel.Uid);
+                base.Save(enumSDPModel, enumSDPModel.YamlMime, enumSDPModel.Uid, MemberType.Enum.ToString());
 
                 return false;
             }

@@ -153,7 +153,7 @@
             if (exceptions == null)
                 return null;
 
-            return exceptions.Select(i => new ExceptionType() { Type = i.Type });
+            return exceptions.Select(i => new ExceptionType() { Type = i.Type,Description=i.Description });
         }
     }
 }

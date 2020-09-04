@@ -4,8 +4,13 @@
     using YamlDotNet.Serialization;
     public class ExceptionType
     {
-        [JsonProperty("name")]
-        [YamlMember(Alias = "name")]
+        [JsonProperty("type")]
+        [YamlMember(Alias = "type")]
         public string Type { get; set; }
+
+        [JsonProperty("description")]
+        [YamlMember(Alias = "description")]
+        public string Description { get; set; }
     }
+
 }

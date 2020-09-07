@@ -148,12 +148,12 @@
             return syntax.Content;
         }
 
-        protected IEnumerable<ExceptionType> TransferExceptions(List<CrefInfo> exceptions)
+        protected IList<ExceptionType> TransferExceptions(List<CrefInfo> exceptions)
         {
             if (exceptions == null)
                 return null;
 
-            return exceptions.Select(i => new ExceptionType() { Type = i.Type });
+            return exceptions.Select(i => new ExceptionType() { Type = i.Type,Description=i.Description }).ToList();
         }
     }
 }

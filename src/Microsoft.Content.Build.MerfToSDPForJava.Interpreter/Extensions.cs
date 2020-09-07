@@ -47,6 +47,14 @@
                 {
                     member.Returns.Type = InterpretXref(pageModel, member.Returns.Type) ?? member.Returns.Type;
                 }
+
+                if (member.Exceptions != null)
+                {
+                    foreach (var subMember in member.Exceptions)
+                    {
+                        subMember.Type = InterpretXref(pageModel, subMember.Type) ?? subMember.Type;
+                    }
+                }
             }
         }
         public static void PropertyToXrefString(this EnumSDPModel enumSDPModel, PageModel pageModel)
@@ -66,6 +74,14 @@
                     if (method.Returns != null)
                     {
                         method.Returns.Type = InterpretXref(pageModel, method.Returns.Type) ?? method.Returns.Type;
+                    }
+
+                    if (method.Exceptions != null)
+                    {
+                        foreach (var subMember in method.Exceptions)
+                        {
+                            subMember.Type = InterpretXref(pageModel, subMember.Type) ?? subMember.Type;
+                        }
                     }
                 }
             }

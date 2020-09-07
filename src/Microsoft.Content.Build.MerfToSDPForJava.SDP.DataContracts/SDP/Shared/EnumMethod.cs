@@ -27,7 +27,7 @@
 
         [JsonProperty("exceptions")]
         [YamlMember(Alias = "exceptions")]
-        public IEnumerable<ExceptionType> Exceptions { get; set; }
+        public IList<ExceptionType> Exceptions { get; set; }
 
         [JsonProperty("returns")]
         [YamlMember(Alias = "returns")]

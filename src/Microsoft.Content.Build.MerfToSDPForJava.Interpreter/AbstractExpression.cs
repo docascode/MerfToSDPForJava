@@ -11,7 +11,7 @@
     {
         protected string _outputFolder;
         protected string _parentUid;
-        public AbstractExpression(string outputFolder, string parentUid)
+        public AbstractExpression(string outputFolder, string parentUid = null)
         {
             _outputFolder = outputFolder;
             _parentUid = parentUid;
@@ -154,6 +154,17 @@
                 return null;
 
             return exceptions.Select(i => new ExceptionType() { Type = i.Type,Description=i.Description }).ToList();
+        }
+
+        protected void TrackTocItem(ArticleItemYaml articleItemYaml, BuildContext context)
+        {
+            if (articleItemYaml == null || context == null)
+            {
+                return;
+            }
+
+            var hierarchyProvider = context.GetSharedObject(Constants.Constants.HierarchyProvider) as HierarchyProvider;
+            hierarchyProvider.Save(_parentUid, articleItemYaml);
         }
     }
 }

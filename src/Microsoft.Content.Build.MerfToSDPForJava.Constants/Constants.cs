@@ -9,7 +9,7 @@
 
         public const string YamlExtension = ".yml";
         public const string SDPYmlFolderName = "SDPYml";
-        public const string ExtendedIdMappings = "extended_id_mappings";
+        public const string HierarchyProvider = "hierarchyProvider";
         public const string Config = "config";
     }
 }

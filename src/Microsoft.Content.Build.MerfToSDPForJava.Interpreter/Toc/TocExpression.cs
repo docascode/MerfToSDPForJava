@@ -1,47 +1,25 @@
 ﻿namespace Microsoft.Content.Build.MerfToSDPForJava.Interpreter
 {
     using Microsoft.Content.Build.MerfToSDPForJava.Common;
-    using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference;
-    using System.Collections.Concurrent;
-    using System.Collections.Generic;
     using System.IO;
 
     public class TocExpression
     {
         protected string _outputFolder;
         public TocExpression(string outputFolder)
-
         {
             _outputFolder = outputFolder;
         }
-        public void Interpreter(TocYaml tocItemYamls, BuildContext context)
+        public void Interpret(BuildContext context)
         {
-            var tocTracker = context.GetSharedObject(Constants.Constants.ExtendedIdMappings) as ConcurrentDictionary<string, List<TocItemYaml>>;
-
-            UpdateTocYaml(tocItemYamls, tocTracker);
-
-            Save(tocItemYamls, null, "toc");
-        }
-
-        public void UpdateTocYaml(TocYaml tocItemYamls, ConcurrentDictionary<string, List<TocItemYaml>> tocTracker)
-        {
-            if (tocItemYamls == null)
-                return;
-
-            foreach (var tocItem in tocItemYamls)
+            var hierarchyProvider = context.GetSharedObject(Constants.Constants.HierarchyProvider) as HierarchyProvider;
+            if (hierarchyProvider == null)
             {
-                if (tocTracker.ContainsKey(tocItem.Uid))
-                {
-                    if (tocItem.Items == null)
-                    {
-                        tocItem.Items = new TocYaml();
-                    }
-
-                    tocItem.Items.AddRange(tocTracker[tocItem.Uid]);
-                }
-
-                UpdateTocYaml(tocItem.Items, tocTracker);
+                return;
             }
+
+            var tocItemYamls = hierarchyProvider.BuildToc();
+            Save(tocItemYamls, null, "toc");
         }
 
         protected virtual void Save(object obj, string comment, string fileName)

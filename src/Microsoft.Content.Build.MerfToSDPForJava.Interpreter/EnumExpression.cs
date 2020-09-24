@@ -8,8 +8,8 @@
 
     public class EnumExpression : AbstractExpression
     {
-        public EnumExpression(string outputFolder, string fileName)
-              : base(outputFolder, fileName)
+        public EnumExpression(string outputFolder)
+              : base(outputFolder)
         {
 
         }
@@ -38,7 +38,7 @@
                 enumSDPModel.Implements = enumItem.Implements;
                 enumSDPModel.PropertyToXrefString(pageModel);
                 base.Save(enumSDPModel, enumSDPModel.YamlMime, enumSDPModel.Uid, MemberType.Enum.ToString());
-
+                TrackTocItem(enumItem, context);
                 return false;
             }
 

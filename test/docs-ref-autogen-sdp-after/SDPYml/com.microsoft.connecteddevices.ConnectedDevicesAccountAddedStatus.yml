@@ -31,8 +31,8 @@ fields:
   summary: <p>The account was successfully added to the platform. </p>
   uid: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.SUCCESS
 inheritances:
-- java.lang.Object
-- java.lang.Enum&lt;ConnectedDevicesAccountAddedStatus&gt;
+- <xref href="java.lang.Object" data-throw-if-not-resolved="False"/>
+- <xref href="java.lang.Enum&lt;ConnectedDevicesAccountAddedStatus&gt;" data-throw-if-not-resolved="False"/>
 methods:
 - fullName: com.microsoft.connecteddevices.ConnectedDevicesAccountAddedStatus.fromInt(int value)
   name: fromInt(int value)

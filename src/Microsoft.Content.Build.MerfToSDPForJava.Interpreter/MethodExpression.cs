@@ -10,8 +10,8 @@
     public class MethodExpression : AbstractExpression
     {
         private Dictionary<string, MemberSDPModel> keyValuePairs_methodOverloading = new Dictionary<string, MemberSDPModel>();
-        public MethodExpression(string outputFolder, string fileName)
-               : base(outputFolder, fileName)
+        public MethodExpression(string outputFolder, string parentUid)
+               : base(outputFolder, parentUid)
         {
 
         }
@@ -31,8 +31,6 @@
             {
                 return true;
             }
-
-            var tocTracker = context.GetSharedObject(Constants.Constants.ExtendedIdMappings) as ConcurrentDictionary<string, List<TocItemYaml>>;
 
             foreach (var item in methodsOverLoading)
             {
@@ -56,16 +54,12 @@
             {
                 keyValuePair.Value.PropertyToXrefString(pageModel);
                 base.Save(keyValuePair.Value, keyValuePair.Value.YamlMime, keyValuePair.Key, keyValuePair.Value.Type);
-                var tocItem = new List<TocItemYaml>() {new TocItemYaml{
+                TrackTocItem(new ArticleItemYaml()
+                {
                     Uid = keyValuePair.Value.Uid,
                     Name = keyValuePair.Value.Name.RemoveFromValue("("),
-                    Type = MemberType.Method.ToString().ToLower()
-                }};
-                tocTracker.AddOrUpdate(_parentUid, tocItem, (key, oldValue) =>
-                {
-                    oldValue.AddRange(tocItem);
-                    return oldValue;
-                });
+                    Type = MemberType.Method
+                }, context);
             }
 
             return true;

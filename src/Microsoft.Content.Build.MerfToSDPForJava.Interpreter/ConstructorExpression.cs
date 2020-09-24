@@ -3,13 +3,13 @@
     using Microsoft.Content.Build.MerfToSDPForJava.Common;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP;
-    using System.Collections.Concurrent;
     using System.Collections.Generic;
     using System.Linq;
+
     public class ConstructorExpression : AbstractExpression
     {
-        public ConstructorExpression(string outputFolder, string fileName)
-            : base(outputFolder, fileName)
+        public ConstructorExpression(string outputFolder, string parentUid)
+            : base(outputFolder, parentUid)
         {
 
         }
@@ -30,7 +30,6 @@
                 return true;
             }
 
-            var tocTracker = context.GetSharedObject(Constants.Constants.ExtendedIdMappings) as ConcurrentDictionary<string, List<TocItemYaml>>;
             var combinationSDPModel = new MemberSDPModel();
             for (var i = 0; i < constructorsOverLoading.Count; i++)
             {
@@ -58,17 +57,13 @@
                     combinationSDPModel.PropertyToXrefString(pageModel);
                     var filename = constructor.Overload.Remove(constructor.Overload.Length - 1);
                     base.Save(combinationSDPModel, combinationSDPModel.YamlMime, filename, combinationSDPModel.Type);
-                    var tocItem = new List<TocItemYaml>() { new TocItemYaml()
+                    var tracker = new ArticleItemYaml()
                     {
                         Uid = constructor.Overload,
-                        Name =  combinationSDPModel.Name.RemoveFromValue("("),
-                        Type =MemberType.Constructor.ToString().ToLower()
-                    } };
-                    tocTracker.AddOrUpdate(_parentUid, tocItem, (key, oldValue) =>
-                    {
-                        oldValue.AddRange(tocItem);
-                        return oldValue;
-                    });
+                        Name = combinationSDPModel.Name.RemoveFromValue("("),
+                        Type = MemberType.Constructor
+                    };
+                    TrackTocItem(tracker, context);
                 }
             }
 
@@ -96,17 +91,8 @@
                 }
 
                 memberSDPModel.PropertyToXrefString(pageModel);
-                base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid, memberSDPModel.Type); var tocItem = new List<TocItemYaml>() { new TocItemYaml()
-                {
-                    Uid = memberSDPModel.Uid,
-                    Name = memberSDPModel.Name.RemoveFromValue("("),
-                    Type = MemberType.Constructor.ToString().ToLower()
-                } };
-                tocTracker.AddOrUpdate(_parentUid, tocItem, (key, oldValue) =>
-                {
-                    oldValue.AddRange(tocItem);
-                    return oldValue;
-                });
+                base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid, memberSDPModel.Type);
+                TrackTocItem(constructor, context);
             }
 
             return true;

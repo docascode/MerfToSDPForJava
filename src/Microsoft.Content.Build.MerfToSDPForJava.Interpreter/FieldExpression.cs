@@ -3,7 +3,6 @@
     using Microsoft.Content.Build.MerfToSDPForJava.Common;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP;
-    using System.Collections.Concurrent;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -25,7 +24,6 @@
             if (fields == null || fields.Count == 0)
                 return true;
 
-            var tocTracker = context.GetSharedObject(Constants.Constants.ExtendedIdMappings) as ConcurrentDictionary<string, List<TocItemYaml>>;
             foreach (var field in fields)
             {
                 var memberSDPModel = new MemberSDPModel();
@@ -45,17 +43,7 @@
 
                 memberSDPModel.PropertyToXrefString(pageModel);
                 base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid, memberSDPModel.Type);
-                var tocItem = new List<TocItemYaml>() { new TocItemYaml
-                {
-                    Uid = member.Uid,
-                    Name = member.Name.RemoveFromValue("("),
-                    Type =MemberType.Field.ToString().ToLower()
-                }};
-                tocTracker.AddOrUpdate(_parentUid, tocItem, (key, oldValue) =>
-                {
-                    oldValue.AddRange(tocItem);
-                    return oldValue;
-                });
+                TrackTocItem(field, context);
             }
 
             return true;

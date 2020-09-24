@@ -53,9 +53,9 @@
                                 pageModel = YamlUtility.Deserialize<PageModel>(reader);
                             }
                             List<AbstractExpression> expressions = new List<AbstractExpression>();
-                            expressions.Add(new PackageExpression(config.OutputPath, filename));
-                            expressions.Add(new TypeExpress(config.OutputPath, filename));
-                            expressions.Add(new EnumExpression(config.OutputPath, filename));
+                            expressions.Add(new PackageExpression(config.OutputPath));
+                            expressions.Add(new TypeExpress(config.OutputPath));
+                            expressions.Add(new EnumExpression(config.OutputPath));
 
                             if (pageModel == null)
                                 return;

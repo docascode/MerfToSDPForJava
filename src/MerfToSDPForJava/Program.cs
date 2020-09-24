@@ -4,6 +4,7 @@
     using Microsoft.Content.Build.MerfToSDPForJava.Constants;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP;
+    using Microsoft.Content.Build.MerfToSDPForJava.Interpreter;
     using Microsoft.Content.Build.MerfToSDPForJava.Steps;
     using System;
     using System.Collections.Concurrent;
@@ -16,8 +17,8 @@
             var opt = new CommandLineOptions();
             var context = new BuildContext();
 
-            ///Track the newly generated SDP file. Key is the uid of its parent node, and value is its corresponding TocItemYaml.
-            var tocTracker = new ConcurrentDictionary<string, List<TocItemYaml>>();
+            ///Store up the newly generated SDP file, then according to the trace, TOC is generated.
+            var hierarchyProvider = new HierarchyProvider();
 
             var procedure = new StepCollection(
                 new MerfToSDPGenerator(),
@@ -37,7 +38,7 @@
                     };
 
                     context.SetSharedObject(Constants.Config, _config);
-                    context.SetSharedObject(Constants.ExtendedIdMappings, tocTracker);
+                    context.SetSharedObject(Constants.HierarchyProvider, hierarchyProvider);
 
                     procedure.RunAsync(context).Wait();
                     status = 0;

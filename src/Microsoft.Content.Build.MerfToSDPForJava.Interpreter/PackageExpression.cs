@@ -8,8 +8,8 @@
 
     public class PackageExpression : AbstractExpression
     {
-        public PackageExpression(string outputFolder, string fileName)
-           : base(outputFolder, fileName)
+        public PackageExpression(string outputFolder)
+           : base(outputFolder)
         {
 
         }
@@ -32,9 +32,8 @@
                 namespaceSDPModel.Classes = TransferClasses(pageModel.References);
                 namespaceSDPModel.Enums = TransferEnums(pageModel.References);
                 namespaceSDPModel.Interfaces = TransferInterfaces(pageModel.References);
-
                 base.Save(namespaceSDPModel, namespaceSDPModel.YamlMime, namespaceSDPModel.Uid, MemberType.Namespace.ToString());
-
+                TrackTocItem(fieldItem, context);
                 List<AbstractExpression> expressions = new List<AbstractExpression>();
                 expressions.Add(new ConstructorExpression(_outputFolder, namespaceSDPModel.Uid));
                 expressions.Add(new FieldExpression(_outputFolder, namespaceSDPModel.Uid));

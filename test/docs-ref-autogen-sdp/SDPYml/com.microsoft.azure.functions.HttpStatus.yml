@@ -241,16 +241,16 @@ fields:
   nameWithType: HttpStatus.VARIANT_ALSO_NEGOTIATES
   uid: com.microsoft.azure.functions.HttpStatus.VARIANT_ALSO_NEGOTIATES
 inheritances:
-- java.lang.Object
-- java.lang.Enum&lt;HttpStatus&gt;
-- com.microsoft.azure.functions.HttpStatusType
+- <xref href="java.lang.Object" data-throw-if-not-resolved="False"/>
+- <xref href="java.lang.Enum&lt;HttpStatus&gt;" data-throw-if-not-resolved="False"/>
+- <xref href="com.microsoft.azure.functions.HttpStatusType?alt=com.microsoft.azure.functions.HttpStatusType&text=HttpStatusType" data-throw-if-not-resolved="False"/>
 inheritedMembers:
 - com.microsoft.azure.functions.HttpStatusType.custom(final int)
 methods:
 - fullName: com.microsoft.azure.functions.HttpStatus.value()
   name: value()
   nameWithType: HttpStatus.value()
-  overridden: <xref href="com.microsoft.azure.functions.HttpStatusType.value()?alt=com.microsoft.azure.functions.HttpStatusType.value()&text=value()" data-throw-if-not-resolved="False"/>
+  overridden: com.microsoft.azure.functions.HttpStatusType.value()
   returns:
     description: <p>int value for this http status </p>
     type: <xref href="int?alt=int&text=int" data-throw-if-not-resolved="False"/>

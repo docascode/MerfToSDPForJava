@@ -241,9 +241,9 @@ fields:
   nameWithType: HttpStatus.VARIANT_ALSO_NEGOTIATES
   uid: com.microsoft.azure.functions.HttpStatus.VARIANT_ALSO_NEGOTIATES
 inheritances:
-- java.lang.Object
-- java.lang.Enum&lt;HttpStatus&gt;
-- com.microsoft.azure.functions.HttpStatusType
+- <xref href="java.lang.Object" data-throw-if-not-resolved="False"/>
+- <xref href="java.lang.Enum&lt;HttpStatus&gt;" data-throw-if-not-resolved="False"/>
+- <xref href="com.microsoft.azure.functions.HttpStatusType?alt=com.microsoft.azure.functions.HttpStatusType&text=HttpStatusType" data-throw-if-not-resolved="False"/>
 inheritedMembers:
 - com.microsoft.azure.functions.HttpStatusType.custom(final int)
 methods:

@@ -8,8 +8,8 @@
 
     public class TypeExpress : AbstractExpression
     {
-        public TypeExpress(string outputFolder, string fileName)
-            : base(outputFolder, fileName)
+        public TypeExpress(string outputFolder)
+            : base(outputFolder)
         {
 
         }
@@ -39,10 +39,9 @@
                 objType.Implements = typeItem.Implements;
                 objType.TypeParameters = TransferTypeParameters(typeItem.Syntax);
                 objType.Uid = typeItem.Uid;
-                
                 objType.PropertyToXrefString(pageModel);
                 base.Save(objType, objType.YamlMime, objType.Uid, objType.Type);
-
+                TrackTocItem(typeItem, context);
                 List<AbstractExpression> expressions = new List<AbstractExpression>();
                 expressions.Add(new ConstructorExpression(_outputFolder, objType.Uid));
                 expressions.Add(new FieldExpression(_outputFolder, objType.Uid));

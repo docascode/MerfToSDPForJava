@@ -2,12 +2,10 @@
 {
     using Microsoft.Content.Build.MerfToSDPForJava.Common;
     using Microsoft.Content.Build.MerfToSDPForJava.Constants;
-    using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.ManagedReference;
     using Microsoft.Content.Build.MerfToSDPForJava.DataContracts.SDP;
     using Microsoft.Content.Build.MerfToSDPForJava.Interpreter;
     using System;
     using System.IO;
-    using System.Text;
     using System.Threading.Tasks;
 
     public class TocYamlGenerator : IStep
@@ -30,45 +28,28 @@
                 throw new ApplicationException(string.Format("SDPYmlOutputPath: {0} doesn't exist.", sdpYmlFolder));
             }
 
-            var inputPaths = config.InputPaths;
-            foreach (var inputPath in inputPaths)
+            try
             {
-                try
-                {
-                    var tocFilePath = Path.Combine(inputPath, "toc.yml");
-                    if (!File.Exists(tocFilePath))
-                    {
-                        throw new ApplicationException(string.Format("toc.yml: toc.yml doesn't exist in the {0} directory.", inputPath));
-                    }
+                TocExpression javaTocExpression = new TocExpression(config.OutputPath);
+                javaTocExpression.Interpret(context);
 
-                    var content = File.ReadAllText(tocFilePath, Encoding.UTF8);
-                    TocYaml toc;
-                    using (StringReader reader = new StringReader(content))
-                    {
-                        toc = YamlUtility.Deserialize<TocYaml>(reader);
-                    }
-
-                    TocExpression javaTocExpression = new TocExpression(config.OutputPath);
-                    javaTocExpression.Interpreter(toc, context);
-
-                    ConsoleLogger.WriteLine(
-                             new LogEntry
-                             {
-                                 Phase = StepName,
-                                 Level = LogLevel.Info,
-                                 Message = $"Succeed to interpret Merf file: Toc.yml.",
-                             });
-                }
-                catch (Exception ex)
-                {
-                    ConsoleLogger.WriteLine(
+                ConsoleLogger.WriteLine(
+                        new LogEntry
+                        {
+                            Phase = StepName,
+                            Level = LogLevel.Info,
+                            Message = $"Succeed to interpret Merf file: Toc.yml.",
+                        });
+            }
+            catch (Exception ex)
+            {
+                ConsoleLogger.WriteLine(
                            new LogEntry
                            {
                                Phase = StepName,
                                Level = LogLevel.Error,
                                Message = $"Fail to interpret Merf file: Toc.yml.Exception: {ex}"
                            });
-                }
             }
 
             return Task.FromResult(1);

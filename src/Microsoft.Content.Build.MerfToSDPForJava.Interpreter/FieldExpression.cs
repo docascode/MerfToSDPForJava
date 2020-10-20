@@ -28,11 +28,13 @@
             var tocTracker = context.GetSharedObject(Constants.Constants.ExtendedIdMappings) as ConcurrentDictionary<string, List<TocItemYaml>>;
             foreach (var field in fields)
             {
+                string fileName = field.Uid;
+
                 var memberSDPModel = new MemberSDPModel();
                 memberSDPModel.FullName = field.FullName;
                 memberSDPModel.Name = field.Name;
                 memberSDPModel.NameWithType = field.NameWithType;
-                memberSDPModel.Uid = field.Uid;
+                memberSDPModel.Uid = field.Uid + "*";
                 memberSDPModel.Type = field.Type.ToString().ToLower();
                 memberSDPModel.Package = field.PackageName;
                 memberSDPModel.Members = new List<Member>();
@@ -44,7 +46,7 @@
                 }
 
                 memberSDPModel.PropertyToXrefString(pageModel);
-                base.Save(memberSDPModel, memberSDPModel.YamlMime, memberSDPModel.Uid, memberSDPModel.Type);
+                base.Save(memberSDPModel, memberSDPModel.YamlMime, fileName, memberSDPModel.Type);
                 var tocItem = new List<TocItemYaml>() { new TocItemYaml
                 {
                     Uid = member.Uid,

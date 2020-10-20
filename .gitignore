@@ -17,6 +17,7 @@ Shared/version
 **/StyleCop.Cache
 **/Scripts/App/*.js
 **/Scripts/App/*.map
+**/docs-ref-autogen-sdp-after/
 
 ###############
 #  temp file  #

@@ -1,0 +1,143 @@
+### YamlMime:ManagedReference
+items:
+- uid: microsoft.bonsai.simulatorapi.SimulatorAPI
+  id: SimulatorAPI
+  parent: microsoft.bonsai.simulatorapi
+  children:
+  - microsoft.bonsai.simulatorapi.SimulatorAPI.DEFAULT_BASE_URL
+  - microsoft.bonsai.simulatorapi.SimulatorAPI.restClient()
+  - microsoft.bonsai.simulatorapi.SimulatorAPI.sessions()
+  href: microsoft.bonsai.simulatorapi.SimulatorAPI.yml
+  langs:
+  - java
+  name: SimulatorAPI
+  nameWithType: SimulatorAPI
+  fullName: microsoft.bonsai.simulatorapi.SimulatorAPI
+  type: Interface
+  source:
+    remote: &o0
+      path: api-docs/java/src/main/java/microsoft/bonsai/simulatorapi/SimulatorAPI.java
+      branch: main-docs
+      repo: https://bizair.visualstudio.com/Machine%20Teaching/_git/brain
+    path: api-docs/java/src/main/java/microsoft/bonsai/simulatorapi/SimulatorAPI.java
+    startLine: 13
+  package: microsoft.bonsai.simulatorapi
+  summary: "<p>The interface for SimulatorAPI class. </p>"
+  syntax:
+    content: public interface SimulatorAPI
+- uid: microsoft.bonsai.simulatorapi.SimulatorAPI.DEFAULT_BASE_URL
+  id: DEFAULT_BASE_URL
+  parent: microsoft.bonsai.simulatorapi.SimulatorAPI
+  href: microsoft.bonsai.simulatorapi.SimulatorAPI.yml
+  langs:
+  - java
+  name: DEFAULT_BASE_URL
+  nameWithType: SimulatorAPI.DEFAULT_BASE_URL
+  fullName: microsoft.bonsai.simulatorapi.SimulatorAPI.DEFAULT_BASE_URL
+  type: Field
+  source:
+    remote: *o0
+    path: api-docs/java/src/main/java/microsoft/bonsai/simulatorapi/SimulatorAPI.java
+    startLine: 24
+  package: microsoft.bonsai.simulatorapi
+  summary: "<p>The default base URL. </p>"
+  syntax:
+    content: public String DEFAULT_BASE_URL= "https://api.bons.ai"
+    return:
+      type: "26831127"
+- uid: microsoft.bonsai.simulatorapi.SimulatorAPI.restClient()
+  id: restClient()
+  parent: microsoft.bonsai.simulatorapi.SimulatorAPI
+  href: microsoft.bonsai.simulatorapi.SimulatorAPI.yml
+  langs:
+  - java
+  name: restClient()
+  nameWithType: SimulatorAPI.restClient()
+  fullName: microsoft.bonsai.simulatorapi.SimulatorAPI.restClient()
+  overload: microsoft.bonsai.simulatorapi.SimulatorAPI.restClient*
+  type: Method
+  source:
+    remote: *o0
+    path: api-docs/java/src/main/java/microsoft/bonsai/simulatorapi/SimulatorAPI.java
+    startLine: 19
+  package: microsoft.bonsai.simulatorapi
+  summary: "<p>Gets the REST client.</p>\r\n<p></p>"
+  syntax:
+    content: public RestClient restClient()
+    return:
+      type: 9545a295
+      description: <p>the <xref uid="" data-throw-if-not-resolved="false">RestClient</xref> object. </p>
+- uid: microsoft.bonsai.simulatorapi.SimulatorAPI.sessions()
+  id: sessions()
+  parent: microsoft.bonsai.simulatorapi.SimulatorAPI
+  href: microsoft.bonsai.simulatorapi.SimulatorAPI.yml
+  langs:
+  - java
+  name: sessions()
+  nameWithType: SimulatorAPI.sessions()
+  fullName: microsoft.bonsai.simulatorapi.SimulatorAPI.sessions()
+  overload: microsoft.bonsai.simulatorapi.SimulatorAPI.sessions*
+  type: Method
+  source:
+    remote: *o0
+    path: api-docs/java/src/main/java/microsoft/bonsai/simulatorapi/SimulatorAPI.java
+    startLine: 30
+  package: microsoft.bonsai.simulatorapi
+  summary: "<p>Gets the Sessions object to access its operations. </p>"
+  syntax:
+    content: public Sessions sessions()
+    return:
+      type: microsoft.bonsai.simulatorapi.Sessions
+      description: <p>the Sessions object. </p>
+references:
+- uid: "26831127"
+  spec.java:
+  - name: String
+    fullName: String
+- uid: 9545a295
+  spec.java:
+  - name: RestClient
+    fullName: RestClient
+- uid: microsoft.bonsai.simulatorapi.SimulatorAPI.restClient*
+  name: restClient
+  nameWithType: SimulatorAPI.restClient
+  fullName: microsoft.bonsai.simulatorapi.SimulatorAPI.restClient
+  package: microsoft.bonsai.simulatorapi
+- uid: microsoft.bonsai.simulatorapi.SimulatorAPI.sessions*
+  name: sessions
+  nameWithType: SimulatorAPI.sessions
+  fullName: microsoft.bonsai.simulatorapi.SimulatorAPI.sessions
+  package: microsoft.bonsai.simulatorapi
+- uid: microsoft.bonsai.simulatorapi.implementation.SimulatorAPIImpl
+  parent: microsoft.bonsai.simulatorapi.implementation
+  href: microsoft.bonsai.simulatorapi.implementation.SimulatorAPIImpl.yml
+  name: SimulatorAPIImpl
+  nameWithType: SimulatorAPIImpl
+  fullName: microsoft.bonsai.simulatorapi.implementation.SimulatorAPIImpl
+  type: Class
+  summary: "<p>Initializes a new instance of the SimulatorAPI class. </p>"
+  syntax:
+    content: public class SimulatorAPIImpl
+- uid: microsoft.bonsai.simulatorapi.Sessions
+  parent: microsoft.bonsai.simulatorapi
+  href: microsoft.bonsai.simulatorapi.Sessions.yml
+  name: Sessions
+  nameWithType: Sessions
+  fullName: microsoft.bonsai.simulatorapi.Sessions
+  type: Interface
+  summary: "<p>An instance of this class provides access to all the operations defined in Sessions. </p>"
+  syntax:
+    content: public interface Sessions
+- uid: microsoft.bonsai.simulatorapi.implementation.SimulatorAPIImpl.sessions()
+  parent: microsoft.bonsai.simulatorapi.implementation.SimulatorAPIImpl
+  href: microsoft.bonsai.simulatorapi.implementation.SimulatorAPIImpl.yml
+  name: sessions()
+  nameWithType: SimulatorAPIImpl.sessions()
+  fullName: microsoft.bonsai.simulatorapi.implementation.SimulatorAPIImpl.sessions()
+  type: Method
+  summary: "<p>Gets the Sessions object to access its operations. </p>"
+  syntax:
+    content: public Sessions sessions()
+    return:
+      type: microsoft.bonsai.simulatorapi.Sessions
+      description: <p>the Sessions object. </p>

@@ -32,7 +32,7 @@
             string fullFileName = "", fullFileNameWithType = "";
 
             fullFileName = fileName + Constants.Constants.YamlExtension;
-            fullFileNameWithType = (fileName + '-' + (memberType == null ? "unknown" : memberType.ToLower())) + Constants.Constants.YamlExtension;
+            fullFileNameWithType = (fileName + '(' + (memberType == null ? "unknown" : memberType.ToLower()) + ')') + Constants.Constants.YamlExtension;
 
             sdpymlfilePath = Path.Combine(StepUtility.GetSDPYmlOutputPath(_outputFolder), fullFileName);
 
@@ -69,7 +69,7 @@
             member.Exceptions = TransferExceptions(articleItemYaml.Exceptions);
             member.Returns = TransferReturns(articleItemYaml.Syntax);
             member.Syntax = TransferSyntax(articleItemYaml.Syntax);
-            member.Summary = articleItemYaml.Summary;
+            member.Summary = YamlUtility.EncodeXrefEmptyUid(articleItemYaml.Summary);
             member.TypeParameters = TransferTypeParameters(articleItemYaml.Syntax);
             member.Uid = articleItemYaml.Uid;
 
@@ -83,14 +83,16 @@
                 return null;
             }
 
+
             var returns = new Return()
             {
-                Description = syntax.Return.Description,
+                Description = YamlUtility.EncodeXrefEmptyUid(syntax.Return.Description),
                 Type = ConvertStringToInlineMD(syntax.Return.Type)
             };
 
             return returns;
         }
+
 
         protected IEnumerable<Parameter> TransferParameters(SyntaxDetailViewModel syntax)
         {
@@ -99,7 +101,7 @@
                 return null;
             }
 
-            var parameters = syntax.Parameters.Select(p => new Parameter() { Description = p.Description, Name = p.Name, Type = p.Type }).ToArray();
+            var parameters = syntax.Parameters.Select(p => new Parameter() { Description = YamlUtility.EncodeXrefEmptyUid(p.Description), Name = p.Name, Type = p.Type }).ToArray();
 
             if (parameters.Length == 0)
             {
@@ -116,7 +118,7 @@
                 return null;
             }
 
-            var typeParameters = syntax.TypeParameters.Select(p => new TypeParameter() { Description = p.Description, Name = p.Name }).ToArray();
+            var typeParameters = syntax.TypeParameters.Select(p => new TypeParameter() { Description = YamlUtility.EncodeXrefEmptyUid(p.Description), Name = p.Name }).ToArray();
 
             if (typeParameters.Length == 0)
             {
@@ -153,7 +155,7 @@
             if (exceptions == null)
                 return null;
 
-            return exceptions.Select(i => new ExceptionType() { Type = i.Type,Description=i.Description }).ToList();
+            return exceptions.Select(i => new ExceptionType() { Type = i.Type,Description = YamlUtility.EncodeXrefEmptyUid(i.Description) }).ToList();
         }
     }
 }

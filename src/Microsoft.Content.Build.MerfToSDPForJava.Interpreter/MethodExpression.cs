@@ -76,7 +76,7 @@
                 return null;
 
             var memberSDPModel = new MemberSDPModel();
-            memberSDPModel.FullName = articleItemYaml.FullName;
+            memberSDPModel.FullName = articleItemYaml.FullName.RemoveFromValue("(");
             memberSDPModel.Name = articleItemYaml.Name;
             memberSDPModel.NameWithType = articleItemYaml.NameWithType.RemoveFromValue("(");
             memberSDPModel.Uid = articleItemYaml.Uid;

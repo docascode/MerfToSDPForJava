@@ -25,7 +25,7 @@
             {
                 var enumSDPModel = new EnumSDPModel();
                 enumSDPModel.Uid = enumItem.Uid;
-                enumSDPModel.FullName = enumSDPModel.FullName;
+                enumSDPModel.FullName = enumItem.FullName;
                 enumSDPModel.Name = enumItem.Name ;
                 enumSDPModel.Package = enumItem.PackageName;
                 enumSDPModel.Summary = enumItem.Summary;

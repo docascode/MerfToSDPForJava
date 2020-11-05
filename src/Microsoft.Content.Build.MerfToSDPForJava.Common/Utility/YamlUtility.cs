@@ -1,9 +1,7 @@
 ﻿namespace Microsoft.Content.Build.MerfToSDPForJava.Common
 {
-    using System;
     using System.IO;
     using System.Net;
-    using System.Text.RegularExpressions;
     using System.Threading;
     using YamlDotNet.Serialization;
 
@@ -58,24 +56,6 @@
         private static string UrlEncodeLinkText(string text)
         {
             return WebUtility.UrlEncode(text);
-        }
-
-        public static string EncodeXrefEmptyUid(string text)
-        {
-            if (String.IsNullOrEmpty(text))
-            {
-                return text;
-            }
-            else
-            {
-                string pattern = @"(?<start><xref uid="""" data-throw-if-not-resolved=""false"")>(?<name>\S+)(?<end><\/xref>)";
-
-                string replaced = Regex.Replace(text, pattern, m =>
-                                        m.Groups["start"].Value + " data-raw-source=\"" 
-                                        + UrlEncodeLinkText(m.Groups["name"].Value) + "\">" + m.Groups["end"].Value);
-
-                return replaced;
-            }
         }
     }
 }

@@ -68,6 +68,8 @@
                                Level = LogLevel.Error,
                                Message = $"Fail to interpret Merf file: Toc.yml.Exception: {ex}"
                            });
+
+                    throw;
                 }
             }
 
